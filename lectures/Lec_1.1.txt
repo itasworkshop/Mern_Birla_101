@@ -24,7 +24,25 @@ https://git-scm.com/downloads
 
 git init
 
-5)
+5)Add your changes/files/directory
+
+git add <name of the file>
+git add .
+
+6) commit your work
+git commit -m "first commit"
+
+7) add branch
+git branch -M main
+
+8) add origin
+ git remote add origin https://github.com/itasworkshop/Mern_Birla_101.git
+
+9) push the changes
+git push -u origin main
+
+
+
 
 
 
