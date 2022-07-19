@@ -1,0 +1,36 @@
+Working with GitHub
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+Github --> repositories 
+1) Version control system
+2) like directories but instead of putting code directly we have standard commands to put our code so that git remembers which is latest version of the code and which one is previous version of the code.
+3) branching --> version 1, 2 etc or feature branch
+4) Team --> entire team is working on same repo
+5) repo --> dedicatedly for code
+6) vendors --> git is open
+https://git-scm.com/
+
+github, gerrit, gitlab, samigit
+
+Important Commands
+1)Get gitbash installed in your system
+https://git-scm.com/downloads
+2) Create directory in your system with same name as that of new repository in your github account.
+3) open gitbash in your repo
+4) Initialise as valid github repo
+
+git init
+
+5)
+
+
+
+
+
+
+
+
+

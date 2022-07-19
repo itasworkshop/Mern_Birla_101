@@ -1,0 +1,23 @@
+Operating Modes
+
+1)Interviews, project implementation and important concept revision.
+2) Javascript --> 2-3 JS
+3) React --> 3-4
+4) Node --> 3-4
+5) Express --> 3-4
+6) Mongo --> 2-3
+7) Project --> remaining
+
+MERN --> Javascript for backend/frontend
+
+Timings
+9:30 --> 6
+9:30 --> 9:45
+9:45 -11 Am --> Discussion
+11 - 11:30 break
+11:30 - 1 PM --> Either Discussion or Lab time
+1- 2 PM --> Lunch Break
+2- 4 PM --> Either Discussion/Lab
+4- 4:30 --> break
+4:30 - 5 --> Doubts
+5-6 --> Daily Quiz and doubts
