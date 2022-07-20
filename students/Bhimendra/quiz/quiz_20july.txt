@@ -1,7 +1,7 @@
 1) <a href="https://www.google.com/" onclick="console.log('link clicked');">link</a>
  <a href="https://www.google.com/" onclick="console.log('link clicked');return false">link</a>
 Ans---> <a href="https://www.google.com/" onclick="console.log('link clicked');">link</a>
-	In 2nd option we are using return false therefore it does not return anything. Insted of false if we use true then both of the above code will work
+	In 2nd option we are using return false therefore it does not return anything. Insted of false if we use true then both of the above code will work.
 	
 
 2)var student={
@@ -25,7 +25,7 @@ function foo(x){
 }
 console.log(foo(5))
 Ans-->20
-	As we are directly assigning the value as x=20 which is a function scope now So for any value of foo() we will get answer as 20. And delete operator removes a property from an object and can't directly delete the value
+	As we are directly assigning the value as x=20 which is a function scope now So for any value of foo() we will get answer as 20. And delete operator removes a property from an object and can't directly delete the value. 
 
 4)function foo(){
   var a
@@ -53,8 +53,17 @@ var a=myArray.sort()
 var b=myArray.sort(compare)
 console.log(a===b)
 Ans--->True
+	sort operator sorts the element in an array. And for both the condition myArray.sort() and myArray.sort(compare) we get a same new array. And === is a strict check as both the output for a and b is same we get it as a True.
+	
 
-7)printMe()
+7)myFruits=['apple','banana','orange']
+const [a,...b]=myFruits
+console.log(a)
+console.log(b)
+Ans---> a=apple, b=['banana','orange']
+	First element in an array will be assigned to a and  As we are using rest operator for b it instructs the computer to add the rest of the elements in an array into b as an new array.
+
+8)printMe()
 function printMe(){
   console.log("hello from function")
 }
@@ -67,12 +76,3 @@ class printMetoo{
 }
 Ans--->hello from function and then a error
 	because  can't access printMetoo before initialization as it is a lexical declaration
-	
-	
-
-7)myFruits=['apple','banana','orange']
-const [a,...b]=myFruits
-console.log(a)
-console.log(b)
-Ans--->SyntexError
-	Because we are using const and its value  can't be assigned or changed . If we use var then we can get the value as a=['apple'], b=['banana','orange']
