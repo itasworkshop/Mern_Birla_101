@@ -1,0 +1,92 @@
+output -
+question 1. 
+<a href ="http://www.goggle.com" onclick ="console.log('link clicked');">
+link one</a>
+<a href ="http://www.goggle.com" onclick ="console.log('link clicked');
+return false">
+link two</a>
+output -second one  
+  explain -- means it will keep in same page  if return false
+
+
+
+question 2 .
+var student = {
+name:"john",
+getName: function(){console.log("student"+this.name);}
+}
+var employee ={
+name:"tom",
+gatName:function(){console.log("employee"+this.name);}
+}
+var run = student.getName.bind(employee);
+run();
+ output -employeejohn
+explain -- 2 vaiable student and employee  student name is john and employee name is tom
+getname is function and it return ".." employee first vairable then student so its return employyee first
+
+
+question 3 .
+x= 10;
+function foo(x){
+x= 20;
+delete x;
+return x;
+}
+console.log(foo(5))
+output-20
+explain - its simply return 20 value
+
+question 4.
+function foo()
+{
+var a;
+console.log(a);
+a=10;
+}
+foo();
+ undefined (bcz value is not defined)
+question 5.
+function evenodd(n) {
+return n%2=0;
+}
+myarray =[1,2,3,4,5];
+console.log(myarray.filter(evenodd));
+output - odd number
+expain - n is take value of array
+function return odd value
+filter return odd number fromm array element.
+
+question 6. 
+var myarray = ['80','90',100];
+function compare(a,b)
+{
+return a-b;
+}
+var a= myarray.sort();
+var b= myarray.sort(compare);
+console.log(a=b);
+ans -['80','90',100]
+its use sorting method 
+question 7.
+myfruits =['apple','banana','orange'];
+const[a,..b] = myfruits;
+console.log(a);
+console.log(b);
+output  a,['b','c'] ...set is new opetor in es6  copy of js object
+
+quesion 8
+printme();
+function printme()
+{
+console.log("hello from function");
+}
+var obj = new printmetoo();
+obj.printme();
+class printmetoo{
+printme()
+{
+console.log("hello");
+}
+}
+output- a error printmetoo is not defined
