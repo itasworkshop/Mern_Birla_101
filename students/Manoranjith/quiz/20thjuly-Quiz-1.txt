@@ -1,0 +1,105 @@
+// Q2)  ------------------------------------------------
+
+var student = {
+  	name: "john",
+  	getName: function(){console.log("student" +this.name);}
+}
+
+var employee = {
+  name: "Tom",
+  getName: function(){console.log("employee"+this.name);}
+}
+
+var run = employee.getName.bind(student);
+run(); 
+
+Ans : employeejhon 
+
+//Q3) --------------------------------------
+
+x = 10;
+function foo(x){
+  x= 20;
+  delete x;
+  return x;
+
+}
+  console.log(foo(5));
+
+Ans : 20 
+
+//Q4)---------------------------------------------------
+
+function foo(){
+  	var a;
+  	console.log(a);
+  	a = 10;
+  return a;
+}
+foo();
+
+Ans: undefined
+
+//Q5)--------------------------------------------
+
+function evenodd(n){
+  return n%2 !== 0;
+}
+myarray = [1,2,3,4,5];
+console.log(myarray.filter(evenodd));
+
+Ans: filter will print a odd numbers from value of array
+
+// Q6)------------------------------
+
+var myArray = ['80','90',100];
+
+function compare(i,j){
+  return i-j;
+}
+
+var a = myArray.sort(); 
+// normally sort will return asc order
+
+var b = myArray.sort(compare); 
+// compare function returns asc order
+
+console.log(a === b); 
+// so both are equal
+
+Ans : true
+
+// Q7)------------------------
+
+myFruits = ['apple','banana','orange'];
+const [c, ...d] = myFruits;
+
+console.log(c); 
+// first value of array
+
+console.log(d); 
+// it is a rest operator so rest of the array objects are there in "d"
+
+Ans: apple
+	 ['banana','orange']
+
+// Q8)----------------------
+
+
+
+function printMe(){
+  console.log("hello from func");
+}
+
+var obj = new PrintMeToo(); //PrintMeToo is not defined
+obj.printMe();
+
+class PrintMeToo{
+  printMe(){
+    console.log("hello from class.");
+  }
+}
+
+printMe();
+
+Ans : PrintMeToo is not defined //so its throwing error

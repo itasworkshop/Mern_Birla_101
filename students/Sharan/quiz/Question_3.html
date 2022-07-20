@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation using JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+            color: white;
+
+        }
+
+        .wrapper {
+            background-color: #202124;
+            position: relative;
+            width: 30%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: #20c9eb5e 0px 13px 27px -5px, #ec686894 0px 8px 16px -8px;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+        }
+
+        .header h2 {
+            color: #fff;
+        }
+
+        .form {
+            margin: 0 auto;
+            max-width: 16rem;
+            overflow: auto;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control input {
+            border: 1px solid transparent;
+            border-bottom-color: white;
+            background-color: transparent;
+            color: white;
+            border-radius: 0;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .form-control input:focus {
+            outline: 0;
+            border-bottom-color: #777;
+        }
+
+        .form-control.success input {
+            border-bottom-color: #2ecc71;
+        }
+
+        .form-control.error input {
+            border-bottom-color: #e74c3c;
+        }
+
+        .form-control i {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+        }
+
+        .form-control.success i.fa-check-circle {
+            color: #2ecc71;
+            visibility: visible;
+        }
+
+        .form-control.error i.fa-times-circle {
+            color: #e74c3c;
+            visibility: visible;
+        }
+
+        .form-control small {
+            color: #e74c3c;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        .form-control.error small {
+            visibility: visible;
+        }
+
+        .form button {
+            background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
+            border-radius: 15px;
+            color: #000;
+            font-size: 1rem;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .form-control button:focus {
+            outline: 0;
+            border-bottom-color: #777;
+        }
+
+        .credit {
+            text-align: center;
+            color: #000;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .credit a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h2>Registration Form</h2>
+        </div>
+        <form id="form" class="form">
+
+            <div class="form-control">
+                <label for="uname"><b>Email</b></label>
+                <input type="email" placeholder="Enter email" id="email" />
+            </div>
+            <div class="form-control">
+                <label for="uname"><b>Password</b></label>
+                <input type="password" placeholder="Password" id="pwd1" />
+            </div>
+
+            <button type="submit" value="Login" class="btn" onClick="login()">Submit</button>
+            <!-- <button type="submit" value="Login" class="btn" onClick="login()" /></td> -->
+        </form>
+    </div>
+
+    <script>function login() {
+            var uname = document.getElementById("email").value;
+            var pwd = document.getElementById("pwd1").value;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (uname == '') {
+                alert("Please enter email.");
+            }
+            else if (pwd == '') {
+                alert("enter the password");
+            }
+            else if (!filter.test(uname)) {
+                alert("Enter valid email id.");
+            }
+            else if (pwd.length < 6 || pwd.length > 6) {
+                alert("Password min and max length is 6.");
+            }
+            else {
+                alert('Thank You for Login');
+            }
+        }
+        //Reset Inputfield code.
+        function clearFunc() {
+            document.getElementById("email").value = "";
+            document.getElementById("pwd1").value = "";
+        }	</script>
+</body>
+
+</html>
