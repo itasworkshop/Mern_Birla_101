@@ -1,0 +1,83 @@
+// Q1). WAP to calculate student grade based on below rules
+// 	a. 90 to 100 -> Grade A
+// 	b. 80 to 90 -> Grade B
+// 	c. 70 to 80 -> Grade C
+// 	d. Failure. 
+
+myStudents = [ 
+    
+    {
+        name : "x",
+        mark : 70
+    },
+    {
+        name : "y",
+        mark : 98
+    },
+    {
+        name : "z",
+        mark : 86
+    },
+    {
+        name : "w",
+        mark : 90
+    },
+    ];
+    
+myStudents.forEach((obj) => {
+    if(obj.mark >= 90 && obj.mark <= 100){
+        obj.grade = "A";
+    } else if(obj.mark >= 80 && obj.mark <= 90){
+        obj.grade = "B";
+    }else if(obj.mark >= 70 && obj.mark <= 80){
+        obj.grade = "C";
+    }
+});
+
+console.log(myStudents);
+
+
+
+
+
+//Q2). WAP to calculate maximum % scored student report from below data.
+// 	{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+// 	{id:102,name:rajesh,cmarks:65,pmarks:85,mmarks:77}
+// 	{id:103,name:suraj,cmarks:43,pmarks:55,mmarks:60}
+// 	{id:104,name:tom,cmarks:71,pmarks:65,mmarks:70}
+
+arr = [
+    {id:101,name:"raj",cmarks:45,pmarks:55,mmarks:67},
+	{id:102,name:"rajesh",cmarks:65,pmarks:85,mmarks:77},
+	{id:103,name:"suraj",cmarks:43,pmarks:55,mmarks:60},
+	{id:104,name:"tom",cmarks:71,pmarks:65,mmarks:70}
+    ];
+    
+  function maximum() {
+      result = arr.filter((a) => {
+         a.total = a.cmarks + a.pmarks + a.mmarks;
+         return
+    }); 
+    
+  } maximum()
+   console.log(arr.reduce((prev, current) => (prev.total > current.total) ? prev : current));
+     
+         
+//Q3).  WAP to perform sorting of below data based on id and name(create class, object and a method for sorting in util class)
+// 	{id:101,name:raj}
+// 	{id:121,name:rajesh}
+// 	{id:130,name:suraj}
+// 	{id:114,name:tom}
+
+ aa = [ 
+    {id:101, name:"raj"},
+	{id:121, name:"rajesh"},
+	{id:130, name:"suraj"},
+	{id:114, name:"tom"}
+	];
+    
+  result =  aa.sort(function(a,b){
+       return a.id - b.id;
+    });
+	console.log(result);
+
