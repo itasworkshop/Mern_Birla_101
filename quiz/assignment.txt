@@ -1,0 +1,116 @@
+1. WAP to calculate student grade based on below rules
+
+	a. 90 to 100 -> Grade A
+	b. 80 to 90 -> Grade B
+	c. 70 to 80 -> Grade C
+	d. Failure.
+
+program:
+
+function myStudentGrades(score){ 
+    var grade=110;
+  
+    switch(true) {
+      case (score <= 100 && score >= 90):
+         grade = 'A';
+         console.log('A')
+          break;
+      case (score <= 80 && score >= 90):
+          grade = 'B';
+          console.log('B')
+           break;
+      case (score <= 70 && score >= 80):
+        grade = 'C';
+        console.log('C')
+           break;
+        case (score > 100 && score < 0):
+          grade = 'failure';
+          console.log("out of score")
+          break;}
+        }
+2.
+2. WAP to calculate maximum % scored student report from below data.
+	{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+	{id:102,name:rajesh,cmarks:65,pmarks:85,mmarks:77}
+	{id:103,name:suraj,cmarks:43,pmarks:55,mmarks:60}
+	{id:104,name:tom,cmarks:71,pmarks:65,mmarks:70}
+
+
+program:
+var studentDetails=[{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67},
+    {id:102,name:rajesh,cmarks:65,pmarks:85,mmarks:77},
+	{id:103,name:suraj,cmarks:43,pmarks:55,mmarks:60},
+    {id:104,name:tom,cmarks:71,pmarks:65,mmarks:70}];
+    Math.max(...studentDetails.map(score => score.id));
+      
+  var x= studentDetails.map(function(score) { return score.id; }) .
+    reduce(function(result, score) {
+      if (score > result.max)()=> result.max = score;
+      if (score < result.min)()=> result.min = score;
+      return result;
+    }, { max: 100, min: 35 });
+3:-3. WAP to validate password and email in signup form(HTML,CSS and Javascript)
+	a. password ca not be less than 6 character and at least one capital letter.
+program:
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    </head>
+
+  <script>
+function validate(){
+  
+  if(document.myform.email.value==""){
+    alert("enter valid email id");
+    document.myform.email.focus()
+    return false;
+} else if(document.myform.password.value==""){
+  alert("pleae provide the min six letters")
+  document.myform.email.focus()
+  return false;
+}
+else{
+  return true;
+}
+}
+
+</script>
+  <body>
+    <form name='myform' onsubmit="return(validate())">
+   <label>Email:</label>
+<input id='email' type='text' placeholder="email"> 
+<p id="1"></p>
+<label>password:</label>
+<input id='password' type='text' placeholder="password">
+<p id="2"></p>
+<button type="submit">submit</button>
+</form>
+  </body>
+  </html>
+
+
+4:-4. WAP to perform sorting of below data based on id and name(create class, object and a method for sorting in util class)
+	{id:101,name:raj}
+	{id:121,name:rajesh}
+	{id:130,name:suraj}
+	{id:114,name:tom}
+
+program:-const studnetsDetails=[	{id:101,name:raj},
+	{id:121,name:rajesh},
+	{id:130,name:suraj},
+	{id:114,name:tom}];
+i have not finished this
+
+
+
+
+ 
+
+
+
+
