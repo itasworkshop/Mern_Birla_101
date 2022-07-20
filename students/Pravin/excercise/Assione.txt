@@ -1,0 +1,55 @@
+Q1. WAP to calculate student grade based on below rules
+	a. 90 to 100 -> Grade A
+	b. 80 to 90 -> Grade B
+	c. 70 to 80 -> Grade C
+	d. Failure.
+
+Ans:-
+
+function grade (a){
+  if (a>90){
+    console.log("Grade A")
+  }
+  else if(a>80 && a<=90){
+    console.log("Grade B")
+  }
+  else if(a>70 && a<=80){
+    console.log("Grade C")
+  }
+  else if(a<=70){
+    console.log("Failure")
+  }
+}
+
+grade(70)
+
+Q2. WAP to calculate maximum % scored student report from below data.
+	{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+	{id:102,name:rajesh,cmarks:65,pmarks:85,mmarks:77}
+	{id:103,name:suraj,cmarks:43,pmarks:55,mmarks:60}
+	{id:104,name:tom,cmarks:71,pmarks:65,mmarks:70}
+
+Ans:-
+
+array=[{id:101,name:"raj",cmarks:45,pmarks:55,mmarks:67},
+{id:102,name:"rajesh",cmarks:65,pmarks:85,mmarks:77},
+{id:103,name:"suraj",cmarks:43,pmarks:55,mmarks:60},
+{id:104,name:"tom",cmarks:71,pmarks:65,mmarks:70}]
+maximum=array.map((i)=>(i.cmarks+i.pmarks+i.mmarks)/3+"-->"+i.name).sort((a,b)=>a>b?-1:1).at(0)
+console.log(maximum)
+
+Q4. WAP to perform sorting of below data based on id and name(create class, object and a method for sorting in util class)
+	{id:101,name:raj}
+	{id:121,name:rajesh}
+	{id:130,name:suraj}
+	{id:114,name:tom}
+Ans:-
+
+array=[{id:101,name:"raj"},
+{id:121,name:"rajesh"},
+{id:130,name:"suraj"},
+{id:114,name:"tom"}]
+sortid=array.sort((a,b)=>a.id>b.id?1:-1)
+sortname=array.sort((a,b)=>a.name>b.name?1:-1)
+console.log(sortid)
+console.log(sortname)
