@@ -1,0 +1,78 @@
+1) <a href="https://www.google.com/" onclick="console.log('link clicked');">link</a>
+ <a href="https://www.google.com/" onclick="console.log('link clicked');return false">link</a>
+Ans---> <a href="https://www.google.com/" onclick="console.log('link clicked');">link</a>
+	In 2nd option we are using return false therefore it does not return anything. Insted of false if we use true then both of the above code will work
+	
+
+2)var student={
+  name:"john",
+  getName:function(){console.log("student"+this.name)}
+}
+var employee={
+  name:"Tom",
+  getName:function(){console.log("employee"+this.name)}
+}
+var run=student.getName.bind(employee)
+run()
+Ans--->studentTom
+	As bind() method  an object can borrow a method from another object.Here employee is borrowing a method getName from student. 
+
+3)x=10
+function foo(x){
+  x=20
+  delete x
+  return x
+}
+console.log(foo(5))
+Ans-->20
+	As we are directly assigning the value as x=20 which is a function scope now So for any value of foo() we will get answer as 20. And delete operator removes a property from an object and can't directly delete the value
+
+4)function foo(){
+  var a
+  console.log(a)
+  a=10
+}
+foo()
+Ans-->Undefined
+	Here we can't call the value before its initialization. because declaration can be uplifted not the initialization part.
+
+5)function evenodd(n){
+  return n%2 !=0;
+}
+myarray=[1,2,3,4,5]
+
+console.log(myarray.filter(evenodd))
+Ans---> [1,3,5]
+	filter gives us new array based on the condition which is n%2 !=0. therefor it gives us a odd number.
+
+6)var myArray=['80','90',100]
+function compare(a,b){
+  return a-b
+}
+var a=myArray.sort()
+var b=myArray.sort(compare)
+console.log(a===b)
+Ans--->True
+
+7)printMe()
+function printMe(){
+  console.log("hello from function")
+}
+var obj=new printMetoo()
+obj.printMe()
+class printMetoo{
+  printMe(){
+    console.log("hello from class")
+  }
+}
+Ans--->hello from function and then a error
+	because  can't access printMetoo before initialization as it is a lexical declaration
+	
+	
+
+7)myFruits=['apple','banana','orange']
+const [a,...b]=myFruits
+console.log(a)
+console.log(b)
+Ans--->SyntexError
+	Because we are using const and its value  can't be assigned or changed . If we use var then we can get the value as a=['apple'], b=['banana','orange']
