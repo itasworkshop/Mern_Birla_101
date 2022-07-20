@@ -1,0 +1,164 @@
+Question 1 Which link will browse google and why?
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.google.com/" onclick="console.log('link clicked');">Link One</a>
+    <a href="https://www.google.com/" onclick="console.log('link clicked'); return false ">Link Two</a>
+</body>
+
+</html>
+
+
+Answer:- First Link
+
+Explaination:- i will work for first link for second link we are returning false by which it will not execute the operation.
+
+
+
+
+Question 2 what will be the output and why?
+
+var student = {
+  name:"john",
+  getName: function(){console.log("student"+this.name);}
+}
+
+var employee = {
+  name:"tom",
+  getName: function(){console.log("employee"+this.name);}
+}
+
+var run= student.getName.bind(employee);
+
+run()
+
+Answer:- studenttom
+
+Explaination:- in this we are using bind method. It creates a new function by borrowing the method from another variable or object. in this it borrows name from employee variable as we pass the variable in bind method like .bind(employee).
+
+
+
+Question 3 what will be the output and why?
+
+x=10;
+function foo(x){
+  x=20;
+  delete x;
+  return x;
+}
+console.log(foo(5))
+
+Answer:- 20
+
+Explaination:- in this question we are passing the value as 5 but inside the function we are re assining the value of x as 20 and in case of value delete will not work it remove a property from an object. and we are returning x .
+
+
+
+
+Question 4 what will be the output and why?
+
+function foo(){
+  var a;
+  console.log(a)
+  a=10;
+}
+foo()
+
+Answer:- Syntax Error
+
+Explaination:- We can not initializing the value of the variable after the deceleration.
+
+
+Question 5 What Does a Filter Do?
+
+function evenodd(n){
+  return n%2 !=0;
+}
+myarray=[1,2,3,4,5]
+
+console.log(myarray.filter(evenodd))
+
+Answer:- myarray=[1,3,5]
+
+Explaination:- it filter the given array on the basis of the condition provided in the function pass the every item through the condition an gives a new array. in above problem we given a condition to get an odd number of array so the output is myarray = [1,3,5].
+
+
+Question 6 what is output and why?
+
+var myarray = ['80', '90', 100];
+
+function compare (a,b){
+  return a-b;
+}
+
+var a=myarray.sort();
+var b = myarray.sort(compare);
+
+
+console.log(a===b)
+
+Answer:- True myarray = ['80', '90', 100]
+
+Explaination:- The value and the data type of both is same at the every index of the array.
+
+
+
+Question 7 what will be the output and why?
+
+
+myfruit = ['apple', 'banana', 'orange'];
+const [a, ...b] = myfruit
+
+console.log(a)
+console.log(b)
+
+Answer:- a= apple and b= ['banana','orange']
+
+Explaination:- here array destructuring is used with rest operator by assigning with the index value of the array with a and b ... these three dots represent as rest and spread operator we are using the rest here which add the rest of the item in b .
+
+
+Question 8 what will be the output and why?
+
+
+printMe();
+
+function printMe(){
+  console.log("hello from function.")
+}
+
+var obj = new PrintMeToo();
+
+obj.printMe();
+
+class PrintMeToo{
+  printMe(){
+    console.log("hello from class")
+  }
+}
+
+Answer:- hello from function. and Uncaught ReferenceError: can't access lexical declaration 'PrintMeToo' before initialization.
+
+Explaination:-  the first function printMe() executes but the class object shows error of lexical decleration because Class obj can be created after class declaration. as below.
+
+class PrintMeToo{
+  printMe(){
+    console.log("hello from class")
+  }
+}
+
+
+var obj = new PrintMeToo();
+
+obj.printMe();
+
+
+
