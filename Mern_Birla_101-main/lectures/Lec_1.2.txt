@@ -1,0 +1,91 @@
+JavaScript
+--> open source used to bring more interactivity in our web application. JS is used for client side as well as server side web application devlopment.
+
+Web application
+client ------request--------> 
+<--response--------- server
+
+client --> some one who is requesting
+server --> someone who is entertaining that request coming from client
+
+1) JS is dynamic typed language
+it means no need to tell type of variables upfront
+a = 10;
+//a = "Rajesh";
+
+console.log("Hello World!!!!!");
+console.log(typeof(a));
+
+2) var, let and const
+redecalaration --> only var is allowed
+
+reassignment of const is not allowed
+
+--> creating function in JS
+function add(a,b){
+  console.log(a+b);
+}
+
+add(10,20);
+
+--> var is functional scope and let is block scope
+var p=10;
+
+function testLetAndVar(){
+  var p = 20;
+  
+  console.log("p is ",p);
+}
+
+console.log(p);
+
+testLetAndVar();
+
+
+function testLetAndVar(){
+  var x = 20;
+  {
+  	let f = 30;
+    console.log("f is ",f); //available only within block
+  }
+  
+  console.log("x is ",x);
+  console.log("f is ",f); //not available outside block
+}
+
+
+testLetAndVar();
+
+Q) Explain difference among let,var and const?
+
+
+ECMA2015 or ECMA script 6
+Q) what are the new features of ECMAscript?
+Q) what is map? does it give a new array or changes existing one?
+Q) map,reduce and filter?
+//collection of indexed items
+myarray = [1,2,3,4,5,6];
+
+console.log(myarray);
+
+//() => {}
+//result = myarray.map( i => i*i);
+
+//result = myarray.filter( j => j%2==0);
+
+result = myarray.reduce((a,b) => a+b);
+
+console.log(result);
+
+Q) what is arrow function?
+
+
+
+
+
+
+
+
+
+
+HTML + CSS + JS

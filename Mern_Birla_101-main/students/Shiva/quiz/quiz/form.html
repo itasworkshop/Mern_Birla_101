@@ -1,0 +1,123 @@
+<html>
+<head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body
+    {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #373737;
+    }
+    form
+    {
+      position: relative;
+      width: 300px;
+    }
+    h3{
+      font-size: 20px;
+      color: #f9f9f9;
+      letter-spacing: 1px;
+      font-weight: 500;
+      align-items: center;
+    }
+    form label{
+      position: relative;
+      display: block;
+    }
+    form input{
+      margin: 10px 0;
+      width: 100%;
+      background: #292929;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+    }
+    .emailText,.passwordText{
+      font-weight: 300;
+      font-style: italic;
+      padding: 5px;
+    }
+    label.valid .emailText,
+     label.valid .passwordText
+     {
+      color: #00ff00;
+
+     }
+label.invalid .emailText,
+     label.invalid .passwordText
+     {
+      color: #f00;
+      
+     }
+     label.valid::before,
+     label.invalid::before
+     {
+     content: "";
+     position: absolute;
+     width: 24px;
+     height: 24px;
+     top: 18px;
+     right: 5px;
+z-index: 100;
+     }
+  </style>
+  </head>
+  <body>
+    <form action="#0">
+      <h3>login form</h3>
+      <label class="emailBox">
+        <input type="email" name="" id="email" placeholder="email">
+        <span class="emailText"></span>
+      </label>
+       <label class="passwordBox">
+        <input type="password" name="" id="password" placeholder="password">
+        <span class="passwordText"></span>
+      </label>
+    </form>
+    <script>
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      email.addEventListener("input",()=>{
+        const emailBox = document.querySelector(".emailBox");
+        const emailText = document.querySelector(".emailText");
+        const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
+        if(email.value.match(emailPattern)){
+          emailBox.classList.add('valid');
+          emailBox.classList.remove('invalid');
+          emailText.innerHTML  ="Your email aadrees in valid";
+        }
+        else {
+            emailBox.classList.add('invalid');
+          emailBox.classList.remove('valid');
+          emailText.innerHTML  ="Your email aadrees in not valid";
+
+        }
+      });
+       password.addEventListener("input",()=>{
+        const passwordBox = document.querySelector(".passwordBox");
+        const passwordText = document.querySelector(".passwordText");
+        const passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+        if(password.value.match(passwordPattern)){
+          passwordBox.classList.add('valid');
+          passwordBox.classList.remove('invalid');
+          passwordText.innerHTML  ="Your password  in valid";
+        }
+        else {
+            passwordBox.classList.add('invalid');
+          passwordBox.classList.remove('valid');
+          passwordText.innerHTML  ="Your password  must be content 6 character as well as at least one number,one lowercase and one upparcase";
+
+        }
+      });
+    </script>
+  </body>
+</html>

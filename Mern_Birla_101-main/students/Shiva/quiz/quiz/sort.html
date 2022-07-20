@@ -1,0 +1,44 @@
+
+<html>
+
+    <head>
+        <body>
+            <script>
+            var items = [
+    {
+        "id": 165,
+        "name": "a"
+    },
+    {
+        "id": 236,
+        "name": "b"
+    },
+    {
+        "id": 376,
+        "name": "c"
+    },
+    {
+        "id": 253,
+        "name": "d"
+    },
+    {
+        "id": 235,
+        "name": "e"
+    },
+    {
+        "id": 24,
+        "name": "f"
+    }
+];
+
+items.sort(function (a, b) {
+    return (a.id - b.id);
+}).sort(function (a, b) {
+    return (a.name - b.name);
+});
+
+console.log(items);
+            </script>
+        </body>
+    </head>
+</html>
