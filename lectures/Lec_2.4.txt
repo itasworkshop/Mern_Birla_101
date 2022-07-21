@@ -1,0 +1,34 @@
+class Calculator{
+  
+  constructor(a,b){
+    this.a = a;
+    this.b = b;
+  }
+  
+  addition(){
+    var result = this.a + this.b;
+    console.log("This addition is "+result);
+  }
+  
+  subtraction(){
+    var result = this.a - this.b;
+    console.log("This subtraction is "+result);
+  }
+  
+  multiplication(){
+    var result = this.a * this.b;
+    console.log("This multiplication is "+result);
+  }
+  
+  division(){
+    var result = this.a / this.b;
+    console.log("This division is "+result);
+  }
+}
+
+
+var calculator = new Calculator(20,5);
+calculator.addition();
+calculator.subtraction();
+calculator.multiplication();
+calculator.division();

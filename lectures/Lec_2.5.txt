@@ -1,0 +1,96 @@
+//Student maximum marks using OOPs
+
+
+class Student{
+  
+  constructor(id,name,cmarks,pmarks,mmarks){
+    this.id = id;
+    this.name = name;
+    this.cmarks = cmarks;
+    this.pmarks = pmarks;
+    this.mmarks = mmarks;
+  }
+  
+  getIntro(){
+    console.log("Hi this is "+this.name+" and my roll no is "+this.id);
+  }
+  
+}
+
+class StudentGradeCalculator{
+  
+  constructor(student){
+    this.student = student;
+  }
+  
+  calculateGrade(student){
+    var total = (student.cmarks + student.pmarks + student.mmarks)/3;
+    
+    if(total >= 90 && total<=100){
+      return "Grade A";
+    }else if(total >= 80 && total<=90){
+      return "Grade B";
+    }else if(total >= 70 && total<=80){
+      return "Grade C";
+    }else{
+      return "Failed!";
+    }
+  }
+  
+  maxGradeStudent(students){
+    console.log(students);
+    
+    var studentWithMarks = [];
+    
+    for(let i=0; i<students.length;i++){
+      var totalMarks = students[i].cmarks+ students[i].pmarks +students[i].mmarks;
+      studentWithMarks.push({student: students[i],total:totalMarks});
+      console.log(students[i]);
+    }
+  
+  	console.log("students with marks" +studentWithMarks);
+    
+    var maxMarks = 0;
+    for(let i=0; i<studentWithMarks.length;i++){    
+      console.log(studentWithMarks[i]);
+    }
+    
+    console.log(maxMarks);
+  }
+}
+
+
+//{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+var st1 = new Student(101,"Rajesh",95,85,77);
+st1.getIntro();
+var st2 = new Student(102,"Suraj",75,65,77);
+st1.getIntro();
+var st3 = new Student(103,"Tom",95,95,77);
+st1.getIntro();
+var st4 = new Student(104,"Ramesh",55,85,57);
+st1.getIntro();
+
+var students = [st1,st2,st3,st4];
+
+var gradeCalc = new StudentGradeCalculator(st1);
+
+gradeCalc.maxGradeStudent(students);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
