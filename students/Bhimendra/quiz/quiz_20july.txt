@@ -35,6 +35,13 @@ Ans-->20
 foo()
 Ans-->Undefined
 	Here we can't call the value before its initialization. because declaration can be uplifted not the initialization part.
+The correct way is:-
+function foo(){
+  var a
+  a=10
+  console.log(a)
+}
+foo()
 
 5)function evenodd(n){
   return n%2 !=0;
@@ -76,3 +83,16 @@ class printMetoo{
 }
 Ans--->hello from function and then a error
 	because  can't access printMetoo before initialization as it is a lexical declaration
+
+Correct way of declaration is:-
+printMe()
+function printMe(){
+  console.log("hello from function")
+}
+class printMetoo{
+  printMe(){
+    console.log("hello from class")
+  }
+}
+var obj=new printMetoo()
+obj.printMe()

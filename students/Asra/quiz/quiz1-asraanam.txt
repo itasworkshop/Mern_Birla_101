@@ -1,0 +1,122 @@
+question1. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+
+this one is running fine. in second scenario since we are returning false so it wont work.
+
+question 2:
+var student ={
+    name: "John",
+    getName : function(){console.log("student" + this.name);}
+}
+    var employee = {
+    name:"Tom",
+    getName: function(){console.log("employee"+ this.name0;}}
+     var run= student.getName.bind(employee);
+     run();
+question3:
+
+answer :studentTom
+we are using Bind method which allows function borrowing.
+
+question 4:
+x = 10;
+function foo(x){
+    x=20;
+    delete x;
+    return x;
+
+}
+console.log (foo(5));
+
+answer :20
+we are value of x as 10 outside at global level then inside function we are assigning value of x as 20
+and returning x. if we give value of x as 5 we are saying to delete it and return x=20.
+
+ques5:
+function foo(){
+    var a;
+    console.log(a);
+    a=10;
+}
+
+foo()
+
+answer : undefined
+first ww are declaring var then printing it before assigning a value so undefined.
+questiuon 6:
+function evenodd(n){
+    return n%2===0;
+
+}
+
+myarray= [1,2,3,4,5];
+console.log(myarray.filter(evenodd));
+answer: [2,4]
+filter method returns the new array by taking actuons with array elements and returning only even numbers.
+question 7: 
+var myArray = ['80', '90', 100];
+
+function compare (a,b){
+    return a-b;
+}
+
+var a = myArray.sort();
+var b = myArray.sort(compare);
+console.log (a===b);
+
+answer: true
+a===b do the strict check comapres value and datatype which is true.
+
+ ques. 7: myFruits = ['apple', 'banana','orange'];
+const[a, ...b] = myFruits;
+
+console.log(a);
+console.log(b);
+
+answer:
+[ 'banana', 'orange' ]
+we use the spread operator and do array destructuring.
+que.8:
+printMe();
+
+function printMe(){
+    console.log("hello from function.")
+
+}
+
+var obj = new printMetoo();
+obj.printMe();
+
+class printMetoo{
+    printMe(){
+        console.log("hello from class.");
+    }
+}
+
+answer: refernce error in printmetoo
+
+printMe();
+function printMe(){
+    console.log("hello from function.")
+
+}
+class printMetoo{
+    printMe(){
+        console.log("hello from class.");
+    }}
+var obj = new printMetoo();
+obj.printMe();
+
+

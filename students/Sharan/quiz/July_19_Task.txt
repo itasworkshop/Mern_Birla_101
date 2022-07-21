@@ -1,0 +1,73 @@
+Q1 . WAP to calculate student grade based on below rules
+	a. 90 to 100 -> Grade A
+	b. 80 to 90 -> Grade B
+	c. 70 to 80 -> Grade C
+	d. Failure.
+
+let letterGrade = function (numberGrade) {
+  let letter;
+  if (numberGrade >= 90) {
+    letter = "A";
+  } else if (numberGrade >= 80) {
+    letter = "B";
+    return letter;
+  } else if (numberGrade >= 70) {
+    letter = "C";
+  } else {
+    letter = "F";
+  }
+  return letter;
+};
+
+// determine student grade percentage
+let percentGrade = function (score, total) {
+  return (percent = ((score / total) * 100).toFixed(2));
+};
+
+let gradeMessage = function (studentScore, totalScore = 100) {
+  let percent = percentGrade(studentScore, totalScore);
+  let letter = letterGrade(percent);
+  return `${letter} percent is (${percent}%)`;
+};
+
+let studentOne = gradeMessage(90);
+let studentTwo = gradeMessage(80);
+let studentThree = gradeMessage(70);
+let studentFour = gradeMessage(60);
+
+console.log(studentOne);
+console.log(studentTwo);
+console.log(studentThree);
+console.log(studentFour);
+
+
+
+
+Q2 . WAP to calculate maximum % scored student report from below data.
+	{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+	{id:102,name:rajesh,cmarks:65,pmarks:85,mmarks:77}
+	{id:103,name:suraj,cmarks:43,pmarks:55,mmarks:60}
+	{id:104,name:tom,cmarks:71,pmarks:65,mmarks:70}
+
+
+
+array=
+[{id:101,name:"raj",cmarks:45,pmarks:55,mmarks:67},
+{id:102,name:"rajesh",cmarks:65,pmarks:85,mmarks:77},
+{id:103,name:"suraj",cmarks:43,pmarks:55,mmarks:60},
+{id:104,name:"tom",cmarks:71,pmarks:65,mmarks:70} ]
+
+maximum = array.map((i)=>(i.cmarks+i.pmarks+i.mmarks)/3+"-->"+i.name).sort((a,b)=>a>b?-1:1);
+	   console.log(maximum)
+
+
+Q4 .
+
+array=[{id:101,name:"raj"},
+	{id:121,name:"rajesh"},
+	{id:130,name:"suraj"},
+	{id:114,name:"tom"}]
+    result=array.sort((a,b)=>a.id>b.id?1:-1)   //sorting for id
+    result1=array.sort((a,b)=>a.name>b.name?1:-1)   //sorting for name
+    console.log(result)
+    console.log(result1)

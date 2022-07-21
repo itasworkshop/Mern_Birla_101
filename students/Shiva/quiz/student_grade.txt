@@ -1,0 +1,41 @@
+class student{
+    constructor(name, cmark,pmark,mmark){
+        this.name = name;
+        this.cmark = cmark;
+        this.pmark = pmark;
+        this.mmark = mmark;
+       
+    }
+     getAvrg(){
+         var grade = new calculateMark((this.cmark + this.pmark + this.mmark)/3);
+         grade.getGrade()
+    }
+    
+}
+
+class calculateMark{
+    constructor(average){
+        this.average = average;
+    }
+    
+    getGrade(){
+         if(this.average >=60 && this.average <=70)
+    {
+       console.log("Grade: D"); 
+    }
+       else if (this.average >= 70 && this.average <= 80 ){
+            console.log("Grade: C");
+        }else if(this.average > 80 && this.average <= 90){
+            console.log("Grade: B");
+        }else if(this.average > 90 && this.average <= 100){
+            console.log("Grade: A");
+        }
+       
+        
+    }
+}
+
+var student1 = new student("shiva",100,90,80);
+student1.getAvrg()
+var student2 = new student("reshu",80,60,50);
+student2.getAvrg()

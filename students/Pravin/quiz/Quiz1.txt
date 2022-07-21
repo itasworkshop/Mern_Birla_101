@@ -73,7 +73,7 @@ function foo(){
 }
 foo()
 
-Answer:- Syntax Error
+Answer:- Undefine
 
 Explaination:- We can not initializing the value of the variable after the deceleration.
 
