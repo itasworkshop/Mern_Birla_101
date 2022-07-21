@@ -35,10 +35,10 @@ class calculation{
 
 var res=new calculator(66,77,88,99)
 var res1=new calculation(res)
-console.log(res1.addition(res))
-console.log(res1.substraction(res))
-console.log(res1.multiply(res))
-console.log(res1.division(res))
+res1.addition(res)
+res1.substraction(res)
+res1.multiply(res)
+res1.division(res)
 
 
 2) WAP to calculate maximum % scored student report from below data.
