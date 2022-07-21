@@ -1,0 +1,58 @@
+Q1 student result with OOps?
+
+class studentsMarks {
+  constructor(name, id, cmarks, pmarks, mmarks) {
+    this.name = name;
+    this.id = id;
+    this.cmarks = cmarks;
+    this.pmarks = pmarks;
+    this.mmarks = mmarks;
+  }
+  getresult() {
+    console.log(
+      this.name +
+        " " +
+        this.id +
+        " " +
+        this.cmarks +
+        " " +
+        this.pmarks +
+        " " +
+        this.mmarks
+    );
+  }
+}
+
+var x = new studentsMarks("rajesh", 101, 45, 55, 87);
+x.getresult();
+var x1 = new studentsMarks("suraj", 102, 65, 50, 80);
+x1.getresult();
+var x2 = new studentsMarks("raj", 103, 45, 55, 87);
+x2.getresult();
+var x3 = new studentsMarks("tom", 104, 45, 55, 87);
+x3.getresult();
+
+--------------------------------------------------------
+
+Q2 Grade A,B,C and Fail with OOps?
+
+class student {
+  constructor(marks) {
+    this.marks = marks;
+  }
+  getresult(marks) {
+    if (marks > 90) {
+      Console.log("Grade A");
+    } else if (marks > 80 && marks <= 90) {
+      console.log("Grade B");
+    } else if (marks > 70 && marks <= 80) {
+      console.log("Grade c");
+    } else if (marks <= 70) {
+      console.log("Fail");
+    }
+  }
+}
+
+var result1 = new student(90);
+
+result1.getresult(90);
