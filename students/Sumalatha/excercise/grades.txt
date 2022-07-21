@@ -1,0 +1,52 @@
+1. WAP to calculate student grade based on below rules
+
+	a. 90 to 100 -> Grade A
+	b. 80 to 90 -> Grade B
+	c. 70 to 80 -> Grade C
+	d. Failure.
+
+class Student{
+  
+  constructor(id,name,cmarks,pmarks,mmarks){
+    this.id = id;
+    this.name = name;
+    this.cmarks = cmarks;
+    this.pmarks = pmarks;
+    this.mmarks = mmarks;
+  }
+  
+  getIntro(){
+    console.log("Hi this is "+this.name+" and my roll no is "+this.id);
+  }
+  
+}
+
+class StudentGradeCalculator{
+  
+  constructor(student){
+    this.student = student;
+  }
+  
+  calculateGrade(student){
+    var total = (student.cmarks + student.pmarks + student.mmarks)/3;
+    
+    if(total >= 90 && total<=100){
+      return "Grade A";
+    }else if(total >= 80 && total<=90){
+      return "Grade B";
+    }else if(total >= 70 && total<=80){
+      return "Grade C";
+    }else{
+      return "Failed!";
+    }
+  }
+}
+
+
+//{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+var st1 = new Student(101,"Rajesh",95,85,77);
+st1.getIntro();
+
+var gradeCalc = new StudentGradeCalculator(st1);
+console.log("The grade of student" + st1.name+ " is " +gradeCalc.calculateGrade(st1));
+
