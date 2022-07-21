@@ -39,3 +39,13 @@ function max()
 }
  max();
  
+output -[ student { id: 1, name: 'a', cmark: 45, pmark: 80, mmark: 94 },
+  student { id: 2, name: 'b', cmark: 65, pmark: 85, mmark: 77 },
+  student { id: 3, name: 'c', cmark: 43, pmark: 55, mmark: 60 },
+  student { id: 4, name: 'd', cmark: 71, pmark: 65, mmark: 70 } ]
+[ student { id: 1, name: 'a', cmark: 45, pmark: 80, mmark: 94, total: 219 },
+  student { id: 2, name: 'b', cmark: 65, pmark: 85, mmark: 77, total: 227 },
+  student { id: 3, name: 'c', cmark: 43, pmark: 55, mmark: 60, total: 158 },
+  student { id: 4, name: 'd', cmark: 71, pmark: 65, mmark: 70, total: 206 } ]
+[ 219, 227, 158, 206 ]
+student value 227
