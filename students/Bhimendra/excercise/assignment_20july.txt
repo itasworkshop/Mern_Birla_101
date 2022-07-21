@@ -1,0 +1,20 @@
+class student{
+    constructor(name,id,cmarks,pmarks,mmarks){
+        this.name=name
+        this.id=id
+        this.cmarks=cmarks
+        this.pmarks=pmarks
+        this.mmarks=mmarks
+    }
+    getintro(){
+        console.log("Name:"+this.name+" id:"+this.id+" cmarks:"+this.cmarks+" pmarks:"+this.pmarks+" mmarks:"+this.mmarks)
+    }
+}
+var a=new student("raj",101,45,55,87)
+a.getintro()
+var b=new student("rajesh",102,65,85,77)
+b.getintro()
+var c=new student("suraj",103,43,55,60)
+c.getintro()
+var d=new student("raj",104,71,65,70)
+d.getintro()
