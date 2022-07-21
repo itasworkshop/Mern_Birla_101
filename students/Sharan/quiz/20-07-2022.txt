@@ -1,0 +1,39 @@
+Q1. quiz-js-101.png
+1.	Since there is no issue on the below code we can able to access the google URL for the below code.
+<a href="https://www.google.com" onClick="console.log("link clicked")";
+>Link One</a>
+
+2.  There is an return false statement which will not allow use to access since it is as booline value 
+<a href="https://www.google.com" onClick="console.log("link clicked"); return false";
+>Link One</a>
+
+
+
+Q2. quiz-js-102.png	
+
+bind() create a new function, a new reference at a function it returns
+
+var student = {
+			
+		name: "John",
+		getName: function(){console.log("student " + this.name);
+	}
+var employee = {
+	name: "Tom",
+	getName: function(){console.log("employee "+ this.name)
+}	
+
+
+var run = student.getName.bind(employee);
+run();
+
+Q3 What is output and why?
+x =10;
+
+function foo(x){
+	x=20;
+	delete x;
+	return x;
+}
+
+console.log(foo(5));

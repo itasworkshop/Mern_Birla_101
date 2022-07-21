@@ -1,0 +1,51 @@
+class student1{
+    constructor(id,name, cmarks,pmarks,mmarks){
+        this.name = name;
+        this.id = id;
+        this.cmarks = cmarks;
+        this.pmarks = pmarks;
+        this.mmarks = mmarks;
+       
+    }
+     getAvg(){
+         var gra = new calculateGrade((this.cmarks + this.pmarks + this.mmarks)/3);
+         gra.getGrade()
+    }
+    
+}
+
+class calculateGrade{
+    constructor(average){
+        this.average = average;
+    }
+    
+    getGrade(){
+        if(this.average > 70 && this.average<80 ){
+            console.log("Grade: C");
+        }else if(this.average>80 && this.average<90){
+            console.log("Grade: B");
+        }else if(this.average>90 && this.average<100){
+            console.log("Grade: A");
+        }else if(this.average<70){
+            console.log("Grade: U");
+        }
+    }
+}
+
+var std1 = new student2(101,"Harry",100,90,100);
+std1.getAvg()
+var std2 = new student2(102,"Cruse",70,95,90);
+std2.getAvg()
+var std3 = new student2(103,"Tom",98,60,78);
+std3.getAvg()
+var std4 = new student2(104,"Vijay",96,98,89);
+std4.getAvg()
+var std5 = new student2(105,"Surya",30,88,59);
+std5.getAvg()
+
+Output::
+Grade: A
+Grade: B
+Grade: C
+Grade: A
+Grade: U

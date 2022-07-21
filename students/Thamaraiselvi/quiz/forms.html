@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+</head>
+<body style="margin:0px auto">
+<div style="width:300px; height:300px; border:1px #000 solid; margin:0px auto">
+ <form>
+ <div style="padding:20px 0">
+ <label for="psw" style="display:inline-block; width:120px; ">Email</label>
+	<input type="email" required /> 
+	</div>
+	<div style="padding:20px 0">
+	 <label for="psw" style="display:inline-block; width:120px">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+
+</body>
+</html>
