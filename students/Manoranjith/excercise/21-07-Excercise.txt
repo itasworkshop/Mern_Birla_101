@@ -78,7 +78,8 @@ var result = [ st1.total,st2.total,st3.total,st4.total ];
 function calculation(){
      for(let i=0; i<result.length; i++){
      if(result[i] > result[i+1]){
-        return ( "Maximum score is " + result[i] + " name is " + students[i].name);
+         var percent = (result[i]/3);
+        return ( `Maximum score is  ${result[i]} name is ${students[i].name} and his Percentage is ${percent}` );
      }
  }
 }calculation()
@@ -86,7 +87,6 @@ function calculation(){
 console.log(result);
 console.log(calculation());
 
- 
-Output: 
+Output : 
 [ 167, 227, 158, 206 ]
-Maximum score is 227 name is Rajesh
+Maximum score is  227 name is Rajesh and his Percentage is 75.66666666666667
