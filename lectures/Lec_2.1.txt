@@ -1,0 +1,28 @@
+ECMA script --> standard for js
+
+ES5 --> old one
+ES6 or ECMA script 2015 --> new one standards with major revision in js language
+
+what changes came into existance from ES5 to ES6?
+1. let was introduced.
+2. const was introduced.
+3. function expression/renaming of the function.
+add = function addition(a,b){
+  console.log(a+b);
+}
+
+
+console.log(typeof(add));
+
+addition(10,20);
+add(40,50);
+4. Arrow Function
+() => {}
+5. Multiline string
+var intro1 = "ergergergerg";
+var intro2 = `ergergergergergfgfegggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg`;
+
+console.log(intro1);
+console.log(intro2);
+6. Better support for oops --class were introduced
+7. foreach

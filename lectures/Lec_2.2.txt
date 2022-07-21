@@ -1,0 +1,43 @@
+OOPs in JavaScript
+-- everything is an object
+
+class --> blueprint for creating object
+empty enquiry form --> common --> blueprint
+
+filled enquiry form --> represnents a real person
+
+object --> real world entities
+1. state/attributes/properties --> compamy,price,color
+2. behaviour/functionalities --> getSwitchOn(), playMusic()
+
+
+//JSON
+
+student = {"id":101,"name":"Rajesh"};
+
+console.log(student);
+
+class Student1{
+  
+  //for intialising the object
+  constructor(name,rollno){
+    this.name = name;
+    this.rollno = rollno;
+  }
+  
+  getIntro(){
+    console.log("Hi this is "+this.name+" and my roll no is "+this.rollno);
+  }
+}
+
+var st1 = new Student1("Rajesh",101);
+st1.getIntro();
+var st2 = new Student1("suesh",102);
+st2.getIntro();
+var st3 = new Student1("Tom",103);
+st3.getIntro();
+
+class variable vs instance variable 
+no concept of class variable
+
+
