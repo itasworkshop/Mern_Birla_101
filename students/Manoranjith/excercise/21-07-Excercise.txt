@@ -1,0 +1,92 @@
+
+
+class Number{
+  //input
+  constructor( number1,number2 ){
+    this.number1 = number1;
+    this.number2 = number2;
+   
+  }
+  getIntro(){
+      console.log("Numbers is : " + this.number1 +" , "+ this.number2 );
+  }
+  getAdd(){
+    var add = this.number1 + this.number2;
+    console.log(" ADD : " + add);
+  }
+  getSub(){
+    var sub = this.number1 - this.number2;
+    console.log("Sub : " + sub);
+  }
+  getMulti(){
+    var multi = this.number1 * this.number2;
+    console.log("Multiple: " + multi);
+  }
+  getDivide(){
+  var divide = this.number1 / this.number2;
+  console.log("Divisible: " + divide);
+  }
+}
+
+
+var st1 = new Number(20,50);
+st1.getIntro();
+st1.getAdd();
+st1.getSub();
+st1.getMulti();
+st1.getDivide();
+
+Output:
+Numbers is : 20 , 50
+ADD : 70
+Sub : -30
+Multiple: 1000
+Divisible: 0.4
+
+
+
+
+
+Q2):
+
+class Student{
+  constructor(id,name,cmarks,pmarks,mmarks){
+    this.id = id;
+    this.name = name;
+    this.cmarks = cmarks;
+    this.pmarks = pmarks;
+    this.mmarks = mmarks;
+  }
+  
+}
+
+var st1 = new Student(101,"Raj",45,55,67);
+var st2 = new Student(102,"Rajesh",65,85,77);
+var st3 = new Student(103,"suraj",43,55,60);
+var st4 = new Student(104,"tom",71,65,70);
+
+var students = [st1,st2,st3,st4];  //creating a new Array
+
+var Total = students.map((obj) =>{
+     var tot = obj.cmarks + obj.pmarks + obj.mmarks;
+     obj.total = tot;
+     return tot;
+     })
+
+var result = [ st1.total,st2.total,st3.total,st4.total ]; 
+
+function calculation(){
+     for(let i=0; i<result.length; i++){
+     if(result[i] > result[i+1]){
+        return ( "Maximum score is " + result[i] + " name is " + students[i].name);
+     }
+ }
+}calculation()
+
+console.log(result);
+console.log(calculation());
+
+ 
+Output: 
+[ 167, 227, 158, 206 ]
+Maximum score is 227 name is Rajesh
