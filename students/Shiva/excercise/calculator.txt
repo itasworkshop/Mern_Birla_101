@@ -1,0 +1,32 @@
+
+class Calculator {
+    add(a,b)
+    {
+        return a+b;
+    }
+    sub(a,b)
+    {
+        return a-b;
+    }
+    mul(a,b)
+    {
+        return a*b;
+    }
+    div(a,b)
+    {
+        if(b==0) 
+        {
+            console.log("not valid");
+        }
+        return a/b;
+    }
+}
+const a =12;
+const b = 6;
+const cal = new Calculator();
+const studentadd = cal.add(a,b);
+const studentsub = cal.sub(a,b);
+const studentmul = cal.mul(a,b);
+const studentdiv = cal.div(a,b);
+const result = [studentadd, studentsub,studentmul,studentdiv];
+console.log(result);

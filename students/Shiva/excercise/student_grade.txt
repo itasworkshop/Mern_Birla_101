@@ -1,0 +1,41 @@
+// max marks using oops
+
+class student {
+    constructor(id,name,cmark,pmark,mmark)
+    {
+        this.id = id;
+        this.name = name;
+        this.cmark = cmark;
+        this.pmark = pmark;
+        this.mmark = mmark;
+    }
+}
+var std1 = new student(1,"a",45,80,94);
+var std2 = new student(2,"b",65,85,77);
+var std3 = new student(3,"c",43,55,60);
+var std4 = new student(4,"d",71,65,70);
+var students = [std1,std2,std3,std4];
+console.log(students);
+
+var total = students.filter((result)=>{
+    var res = result.cmark+ result.mmark+ result.pmark;
+    result.total = res;
+    
+    
+})
+console.log(students);
+var newarray = [std1.total,std2.total,std3.total,std4.total];
+
+console.log(newarray);
+function max()
+{
+    for(let i=0 ;i<newarray.length;i++)
+    {
+        if(newarray[i]>newarray[i+1])
+        {
+            console.log("student value "+newarray[i]);
+        }
+    }
+}
+ max();
+ 
