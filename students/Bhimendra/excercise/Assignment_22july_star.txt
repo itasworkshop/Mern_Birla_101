@@ -1,0 +1,75 @@
+1) WAP to print below patterns
+1.1
+*
+**
+***
+****
+*****
+Ans--->for(let i=0;i<=5;i++){
+    console.log("*".repeat(i))
+}
+
+Ans--->var star=""
+for (let i=0;i<5;i++){
+    for (let j=0;j<5;j++){
+        if(i>=j){
+            star +="* "
+        }
+    }
+    star+="\n"
+}
+console.log(star)
+
+1.2
+*****
+****
+***
+**
+*
+Ans--->var star=""
+for (let i=0;i<5;i++){
+    for (let j=0;j<5;j++){
+        if(j>=i){
+            star +="* "
+        }
+    }
+    star+="\n"
+}
+console.log(star)
+
+1.3
+     *
+   ***
+  *****
+ *******
+*********
+Ans--->star=""
+for (let i = 1; i <= 5; i++) {
+    for (let k = i; k <= 5 ; k++) {
+        star +=" "
+    }
+    for (let j = 1; j <= i; j++) {
+        star +="* "
+    }
+    star+="\n"
+  }
+  console.log(star)
+
+1.4
+
+*********
+ *******
+  *****
+   ***
+    *
+Ans--->star=""
+for (let i = 1; i <= 5; i++) {
+    for (let k = 1; k <= i ; k++) {
+        star +=" "
+    }
+    for (let j = i; j <= 5; j++) {
+        star +="* "
+    }
+    star+="\n"
+  }
+  console.log(star)
