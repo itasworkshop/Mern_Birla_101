@@ -14,6 +14,8 @@ function checkMatrix(data) {
   return "it is an identical";
 }
 
+
+
 console.log("3*3 Matrix is: " + checkMatrix([[1, 0, 0],  [0, 1, 0],  [0, 0, 1]]))
 console.log("2*2 Matrix is: " + checkMatrix([[1, 0],  [0, 1]]))
 /*
