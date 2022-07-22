@@ -1,0 +1,116 @@
+Q1. WAP For star pattern as 
+
+*
+**
+***
+****
+*****
+
+for (var i = 1; i <= 5; i++) {
+  for (var j = 1; j <= i; j++) {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
+
+Q2. WAP For star pattern as 
+
+
+*****
+****
+***
+**
+*
+
+for (var i = 1; i <= 5; i++) {
+  for (var j = i; j <= 5; j++) {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
+Q3. WAP For star pattern as 
+
+
+  *
+  **
+  ***
+  ****
+ *****
+
+
+for (var i = 1; i <= 5; i++) {
+  for (var k = i; k <= 5 ; k++) {
+    document.write("&nbsp");
+  }
+  for (var j = 1; j <= i; j++) {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
+
+
+Q4. WAP For star pattern as 
+
+ ********
+  ******
+   ****
+    **
+    *
+
+for (var i = 1; i <= 5; i++) {
+  for (var k = 1; k <= i; k++) {
+    document.write("&nbsp");
+  }
+  for (var j = i; j <= 5; j++) {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
+
+Q4. WAP for arrow 
+
+
+       **
+      ****
+     ******
+    ********
+   **********
+  ************
+ **************
+    ********
+    ********
+    ********
+
+
+// Arrow
+for (var i = 1; i <= 7; i++) {
+  for (var k = i; k <= 7; k++) {
+    document.write("&nbsp");
+  }
+  for (var j = 1; j <= i; j++) {
+    document.write("*");
+  }
+
+  document.write("<br/>");
+}
+
+for (var l = 1; l <= 3; l++) {
+  for (var a = 1; a <= i - 4; a++) {
+    document.write("&nbsp");
+  }
+  document.write("*");
+  for (var b = 1; b <= 3; b++) {
+    document.write("*");
+  }
+  document.write("<br/>");
+}
+
+
