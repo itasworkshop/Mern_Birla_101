@@ -1,0 +1,71 @@
+1) WAP to check whether given matrix is identical matrix or not for 2*2 and 3*3 matrix?
+Ans--->
+function identicalMatrix(num) {
+  for (let i = 0; i < num.length; i++) 
+   {
+    for (let j = 0; j <num.length; j++)
+     {
+      if (num[i][j] !== 1 && i === j || num[i][j] && i !== j)
+      {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(identicalMatrix([[1, 0, 0],  [0, 1, 0],  [0, 0, 1]]))
+
+
+2) WAP to make reverse of the string using loops.
+Ans--->
+function reverse(arg){
+	let str= "";
+    for (let i of arg){
+    	str= i + str;
+    }
+	return str;
+}reverse("hello")
+
+
+3) WAP to sort array of your choice using loops.
+Ans--->
+function sorting(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        let temp = arr[i]; 
+        arr[i] = arr[j]; 
+        arr[j] = temp; 
+      };
+    };
+  };
+  return arr;
+};
+console.log(sorting([22,44,1,4,-4]));
+
+
+4) WAP to check whether given number or string is palindrom or not?
+Ans--->
+function reverse( str )
+  {
+    let rev_str = "";
+    for( let i = str.length-1 ;i >= 0 ;i--)
+    {
+      rev_str+= str[i];
+    }
+    return rev_str;
+  }
+  function is_palindrome( str )
+  {
+    reverse_str = reverse(str);
+   
+    if( reverse_str === str)
+    {
+      console.log("Given string is palindrome.");
+    }
+    else
+    {
+      console.log("Given string is not palindrome.")
+    }
+  }
+  is_palindrome("madam");

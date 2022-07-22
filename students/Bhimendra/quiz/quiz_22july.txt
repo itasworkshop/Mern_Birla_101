@@ -1,0 +1,178 @@
+JS-MCQ-Set-1
+
+1.Javascript is an _______ language?
+a. Object Oriented
+b. Procedural
+c. Object-Based
+d. None.
+Ans--->a.  Object Oriented
+	Javascript is an object oriented language.
+
+2. Which of the following keywords is used to define a variable in Javascript?
+a. var
+b. let
+c. both a and b
+d. None
+Ans--->c. both a and b
+	There are 3 variable that can be used  to define a variable in Javascript var, let, const.
+	
+
+3.Which of the following methods is used to access HTML elements using Javascript?
+a. getElementbyId()
+b. getElementsByClassName()
+c. both a and b
+d. None
+Ans--->c. both a and b
+	Javascript uses both  getElementbyId() and getElementsByClassName()  to access HTML elements. we use getElementbyId() to returns an element with a specified value.
+and it returns null if the element does not exist. But getElementsByClassName()  method returns an array of objects of the child elements with a specified class name.
+
+
+4. Upon encountering empty statements, what does the Javascript Interpreter do?
+a. Throw an error
+b. Ignores the statements
+c. Gives a warning
+d. None
+Ans--->b. Ignores the statements
+	When we get an empty statement then javascript just Ignores the statements and does not give any error.
+
+
+5. Which of the following methods can be used to display data in some form using Javascript?
+a. document.write()
+b. console.log()
+c. window.alert
+d. All of the above
+Ans--->d. All of the above
+	
+
+
+6. How can a datatype be declared to be a constant type?
+a. const
+b. var
+c. let
+d. constant
+Ans--->a.const
+	We use const because we can't reassign the value as well as can't redeclare the variable. Therefore can't change the declared data.
+
+7. What will be the output of the following code snippet?
+
+<script type="text/javascript">
+a = 5 + "9";
+document.write(a);
+</script>
+
+a. Compilation Error
+b. 14
+c. Runtime Error
+d. 59
+Ans--->d. 59
+	Here the concadination takes place. because we are adding a datatype of number with string. addition has two property concadination and adding.
+
+8. What will be the output of the following code snippet?
+
+<script type="text/javascript" language="javascript">
+  
+var a = "Scaler";
+var result = a.substring(2, 4);
+document.write(result);
+  
+</script>
+a. al
+b. ale
+c. cal
+d. caler
+Ans--->a. al
+	We use substring to extracts characters from start to end. and it does not disturb the original string. wher 2 is a start of string length and4 is a end of string length.
+
+9. What will be the output of the following code snippet?
+
+<script type="text/javascript" language="javascript">
+ 
+var x=12;
+var y=8;
+var res=eval("x+y");
+document.write(res);
+ 
+</script>
+a. 20
+b. x+y
+c. 128
+d. None
+Ans--->a. 20
+	eval  evaluates an argument
+
+10. 
+When the switch statement matches the expression with the given labels, how is the comparison done?
+a. Both datatype and the result of the expression are compared.
+b. Only datatype is compared
+c. Only the value of the expression is compared
+d. None
+Ans--->a. Both datatype and the result of the expression are compared.
+
+
+11. What keyword is used to check whether a given property is valid or not?
+a. in
+b. is in
+c. exists
+d. lies
+Ans--->a. in
+	we use in keyword is used to check whether a given property is valid or not.
+
+12. What is the use of the <noscript> tag in Javascript?
+a. The contents are displayed by non-js based browsers
+b. Clears all the cookies and cache
+c. Both a and b
+d. None
+Ans--->a. The contents are displayed by non-js based browsers
+              noscript is a tag that defines a browser that doesn't support script tag.
+
+
+13. 
+What will be the output of the following code snippet?
+
+(function(){
+ setTimeout(()=> console.log(1),2000);
+ console.log(2);
+ setTimeout(()=> console.log(3),0);
+ console.log(4);
+})();
+a. 1234
+b. 2341
+c. 2431
+d. 4321
+Ans--->c. 2431
+	When it comes to output console.log is always executed first then setTimeout. Because setTimeout will be stored in a callStack for its execution to be completed even if its timing is of 0sec. So we get a output as 2431. 
+
+14. 
+What will be the output of the following code snippet?
+
+(function(a){
+ return (function(){
+   console.log(a);
+   a = 6;
+ })()
+})(21);
+
+a. 6
+b. NaN
+c. 21
+d. None
+Ans--->c. 21
+	As we are passing a value of a as 21. and a=6 is assigned to a after  console.log a value does not change. if a=6 would be first initialized then call console.log(a) then the answer would be 6.
+
+
+15. What will be the output of the following code snippet?
+
+function solve(arr, rotations){
+ if(rotations == 0) return arr;
+ for(let i = 0; i < rotations; i++){
+   let element = arr.pop();
+   arr.unshift(element);
+ }
+ return arr;
+}
+// solve([44, 1, 22, 111], 5);
+a. [111,44,1,22]
+b. [44,1,22,111]
+c. [111,44,1,22]
+d. [1,22,111,44]
+Ans--->[111,44,1,22]
