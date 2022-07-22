@@ -73,3 +73,40 @@ for (let i = 1; i <= 5; i++) {
     star+="\n"
   }
   console.log(star)
+
+1.5
+          * 
+         * * 
+        * * * 
+       * * * *
+      * * * * *
+     * * * * * *
+    * * * * * * *
+   * * * * * * * *
+ * * * * * * * * *
+         * * *
+         * * *
+         * * *
+Ans--->
+star=""
+for (let i = 1; i <= 9; i++) {
+    for (let k = i; k <= 9 ; k++) {
+        star +=" "
+    }
+    for (let j = 1; j <= i; j++) {
+        star +="* "
+    }
+    star+="\n"
+  }
+  console.log(star)
+
+  for (let i=0;i<3;i++){
+    for (let k = 1; k <= 7 ; k++) {
+        star +=" "
+    }
+    for (let j=0;j<3;j++){
+            star +="* "
+    }
+    star+="\n"
+}
+console.log(star)
