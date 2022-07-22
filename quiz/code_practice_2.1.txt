@@ -1,0 +1,4 @@
+1) WAP to check whether given matrix is identical matrix or not for 2*2 and 3*3 matrix?
+2) WAP to make reverse of the string using loops.
+3) WAP to sort array of your choice using loops.
+4) WAP to check whether given number or string is palindrom or not?
