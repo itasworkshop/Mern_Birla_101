@@ -1,0 +1,88 @@
+//1) for/of loop
+
+var myarr = [1,23,22,45,67,87,34];
+
+for (let i of myarr){
+  console.log(i);
+}
+
+var name = "Rajesh Singh";
+
+for(let i of name){
+  console.log(i);
+}
+
+var students = [
+  {"id":101,"name":"Rajesh"},
+  {"id":102,"name":"Suraj"},
+  {"id":103,"name":"Tom"}
+];
+
+for(let student of students){
+  console.log(student);
+}
+
+//2) for/in --> for objects
+
+var student =  {"id":101,"name":"Rajesh","grade":"A"};
+
+for (let i in student){
+  console.log(student[i]);
+}
+
+
+//for/of vs for/in
+
+var name = "Rajesh";
+
+for (let i of name) console.log(i); //collection of items
+
+for (let i in name) console.log(name[i]); //object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

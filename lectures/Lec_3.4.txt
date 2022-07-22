@@ -1,0 +1,104 @@
+//return new line --> undefined
+
+function getResult1(){
+  var a = 10;
+  return a;
+}
+
+
+console.log(getResult1());
+
+function getResult2(){
+  var a = 10;
+  return 
+  a;
+}
+
+
+console.log(getResult2());
+
+function getResult3(){
+  var a = 10;
+  return {
+    i: a
+  };
+}
+
+
+console.log(getResult3());
+
+//returning multiple items --> using object return
+
+function getResult4(){
+  var a = 10;
+  var b = 20;
+  return {
+    key1:a,
+    key2:b
+  };
+}
+
+
+console.log(getResult4());
+
+//destructring object in ES6
+//const {key1,key2} = getResult4();
+
+//console.log(key1);
+//console.log(key2);
+
+
+
+function getResult5(){
+  var a = 10;
+  var b = 20;
+  return [a,b];
+}
+
+
+console.log(getResult5());
+
+//destructring object in ES6
+const [key7,key8] = getResult5();
+
+console.log(key7);
+console.log(key8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
