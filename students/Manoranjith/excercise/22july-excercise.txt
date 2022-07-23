@@ -1,0 +1,144 @@
+//Q1.1)----------------------
+
+var x = 5;
+
+var y = "";
+for (let i = 1; i <= x; i++) {
+  for (let j = 0; j < i; j++) {
+    y += "*";
+  }
+  y += "\n";
+}
+console.log(y);
+
+output: 
+node /tmp/VeGzTmdXAB.js
+*
+**
+***
+****
+*****
+
+// Q1.2)---------------------------
+
+var w = "";
+for (let i = 0; i < x; i++) {
+  for (let k = 0; k < x - i; k++) {
+    w += "*";
+  }
+  w += "\n";
+}
+console.log(w);
+
+output:
+*****
+****
+***
+**
+*
+
+
+//Q1.3)-------------------------------
+
+var q = "";
+for (let i = 1; i <= x; i++) {
+  for (let j = 1; j <= x - i; j++) {
+    q += " ";
+  }
+ 
+  for (let k = 0; k < 2 * i - 1; k++) {
+    q += "*";
+  }
+  q += "\n";
+}
+
+console.log(q);
+
+output:
+    *
+   ***
+  *****
+ *******
+*********
+
+//Q1.4---------------------------------
+
+var p = "";
+for (let i = 0; i < x; i++) {
+  for (let j = 0; j < i; j++) {
+    p += " ";
+  }
+
+  for (let k = 0; k < 2 * (x-i) - 1; k++) {  // 5-0 -> 10 -1 -> 9
+    p += "*";
+  }
+  p += "\n";
+}
+console.log(p);
+
+output:
+*********
+ *******
+  *****
+   ***
+    *
+
+//Q1.5----- Christmas Tree----------------------------
+
+var tree = "";
+for (let i = 1; i <= x; i++) {
+  for (let j = 1; j <= x - i; j++) {
+    tree += " ";
+  }
+ 
+  for (let k = 0; k < 2 * i - 1; k++) {
+    tree += "*";
+  }
+  tree += "\n";
+}
+
+for (let i = 0; i < x/2; i++) {
+  for (let j = 0; j < (x/2); j++) {
+    tree += " ";
+  }
+
+  for (let k = 0; k < (x/2); k++) { 
+    tree += "*";
+  }
+  tree += "\n";
+}
+
+console.log(tree);
+
+output:
+    *
+   ***
+  *****
+ *******
+*********
+   ***
+   ***
+   ***
+
+//Q1.6)--------------Reverse trignometry---------------
+
+var z = "";
+for (let i = 1; i <= x; i++) {    // x=5 
+    
+  for (let j = 1; j <= x - i; j++) {  
+    z += " ";
+  }
+  for (let k = 0; k < i; k++) {
+    z += "*";
+  }
+  z += "\n";
+}
+console.log(z);
+
+output:
+    *
+   **
+  ***
+ ****
+*****
+

@@ -1,0 +1,92 @@
+
+//1)WAP to check whether given matrix is identical matrix or not for 2*2 and 3*3 matrix?
+function checkMatrix(data) {
+  for (let i = 0; i < data.length; i++) 
+   {
+    for (let j = 0; j < data.length; j++)
+     {
+      if (data[i][j] !== 1 && i === j )
+      {
+        return "it is not an identical";
+      }
+    }
+  }
+  return "it is an identical";
+}
+
+
+
+console.log("3*3 Matrix is: " + checkMatrix([[1, 0, 0],  [0, 1, 0],  [0, 0, 1]]))
+console.log("2*2 Matrix is: " + checkMatrix([[1, 0],  [0, 1]]))
+/*
+OutPut: 
+3*3 Matrix is: true
+2*2 Matrix is: true 
+Explanation: 
+I have created the function for check identity matrix. I've Created the nested 
+forLoop for iterating the nestedarray, I've created the logic to check if the array of row and column is equal, And also check if diagonal values of array is not equal to 1, It will return "it is not an identical", Else It will return "it is an identical" , 
+*/
+
+
+//2)WAP to make reverse of the string using loops.
+
+function reverseString(name){
+var rev = "";
+    for (let i = name.length - 1; i >= 0; i--){
+    rev += name[i];
+    }
+    return rev;
+    }
+console.log(reverseString("mano"));
+
+/* 
+Output: onam 
+Explanation : 
+    I have created the function for reverse the string. Then I created a for
+    loop for iterating tne string and inside the loop I've created the logic
+    for printing the string from last-letter to first-letter
+    */
+
+//3)WAP to sort array of your choice using loops.
+
+var array = [1,4,6,2,8,5,3 ]; // length -> 7
+
+for(let i=0; i<array.length ; i++){
+    var temp ;
+    for(let j = array.length; j >= i+1; j--){
+        if(array[i] > array[j]){
+           temp = array[i];
+           array[i] = array[j];
+           array[j] = temp;
+        }
+    }
+  
+}
+console.log( `Ascending order : [${array}]`);
+
+/* 
+Output: Ascending order : [1,2,3,4,5,6,8] 
+Explanation : 
+     I created a forloop for iterating tne Array and inside the loop I've created the nested loop to check the condition: If current value is greater than next value, then I've used the Swapping logic for swapping the values. Else it retains the same current value & next value.
+*/
+
+//4) WAP to check whether given number or string is palindrom or not?
+var string = "madam";
+function checkPalindromeOrNot(str) {
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            return 'It is not a palindrome';
+        }
+    }
+    return 'It is a palindrome';
+}
+
+console.log(`String Is : ${string}` );
+console.log(checkPalindromeOrNot(string));
+
+/* 
+Output: 
+String Is : madam
+It is a palindrome 
+Explanation : I have created the function for checking palindrome or not. I've created a forloop for iterating the string half way and inside the loop I've checked the condition: If the first index value is not equal to last value of the string, It will return "It is not a Palindrome", Else if the values are equal, the loop will continue. If all the string values are equal, It will return "It is a palindrome"
+*/
