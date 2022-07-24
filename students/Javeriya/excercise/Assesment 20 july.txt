@@ -1,0 +1,115 @@
+Q1:
+ <a href="https://www.google.com" onclick="console.log('link clicked')">Link One</a>
+    <a href="https://www.google.com" onclick="console.log('link clicked'); return false">Link two</a>
+Output : Link one is work becouse first link reaturn a true value but link two return a false.
+thats a reson link one is working.
+
+
+
+
+
+
+Q2:
+
+var student ={
+    name: "john",
+    getName: function (){console.log("student " + this.name)
+    }
+}
+var empolyee={
+    name: "Tom",
+    getName: function(){
+        console.log("employee "+this.name)
+    }
+}
+var run = student.getName.bind(empolyee);
+run()
+
+
+
+OutPut: student Tom
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value.
+.........................................................................
+Q3 :
+x=10
+function foo(x){
+    x=20
+    delete x
+    return x
+}
+console.log(foo(5))
+
+// Output : 20
+
+function foo return a deleted value.
+........................................................
+
+Q4:
+function foo (){
+    var a;
+    console.log(a)
+    a=10
+}
+foo()
+output : undefind
+
+becouse we can create a function and in this function we can declare a var with undefind.
+javascript is synchronous language its exeicute line by line 
+that a reson a console.log() undefind.
+..........................................................
+
+Q5:
+function evenodd (n){
+    return n%2 !== 0
+
+}
+myarray =[1,2,3,4,5]
+console.log(myarray.filter(evenodd))
+output: [1,2,5]
+
+even function reaturn a n devided not equal to two value.
+The filter() method returns a new array with all elements that pass the test defined by the given function. 
+so result is [1,2,5]
+...........................................................
+
+Q6:
+var myarray =["80","90",100]
+function  compare (a,b){
+    return a-b
+}
+var a= myarray.sort()
+var b=myarray.sort(compare)
+console.log(a===b)
+output : True
+The function should return a negative, zero, or positive value, depending on the arguments,
+a and b are true thats console.log(a===b) True.
+..............................................................
+
+Q7:
+myFruits =["apple","banana","orange"];
+const [a, ...b]=myFruits
+console.log(a)
+console.log(b)
+output : apple
+         ["banana","orange"]
+
+Destructuring is an efficient way to extract multiple values from data that is stored in arrays or objects.
+Destructuring all element copy by using spred oprator.
+................................................................
+
+Q8:
+printMe()
+
+function printMe(){
+    console.log("hello from function")
+}
+
+var obj = new PrintMetoo()
+obj.printMe()
+
+class PrintMetoo{
+    printMe(){
+        console.log("hellow from class")
+    }
+}
