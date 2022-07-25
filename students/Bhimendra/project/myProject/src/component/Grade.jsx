@@ -24,6 +24,7 @@ export const Grade=()=>{
             <input type="text" placeholder="Enter Percentage" onChange={(e)=>setGrade(e.target.value)}/>
             <button onClick={()=>gradecalc()}>Submit</button>
             <h4>Percentage is {grade} and Grade is {show}</h4>
+            <hr />
         </div>
     )
 }
