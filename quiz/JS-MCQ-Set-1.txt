@@ -6,6 +6,10 @@ b. Procedural
 c. Object-Based
 d. None.
 
+Answer:- a
+
+Explanation:- As we know javaScript is a object oriented scripting language.
+
 
 2. Which of the following keywords is used to define a variable in Javascript?
 a. var
@@ -13,11 +17,19 @@ b. let
 c. both a and b
 d. None
 
+Answer:- c
+
+Explanation:- yes both var and let is use to declare a variable in javaScript as let was introduce in ES6 and earlier var was used.
+
 3.Which of the following methods is used to access HTML elements using Javascript?
 a. getElementbyId()
 b. getElementsByClassName()
 c. both a and b
 d. None
+
+Answer:- c
+
+Explanation:-Both getElementByID() and getElementByClassName() is use to access HTML element using javaScript we declare some id name and classname for the HTML element so that we can access it.
 
 
 4. Upon encountering empty statements, what does the Javascript Interpreter do?
@@ -26,6 +38,9 @@ b. Ignores the statements
 c. Gives a warning
 d. None
 
+Answer:- b
+
+Explanation:- JavaScript interpreter ignores the statement.
 
 5. Which of the following methods can be used to display data in some form using Javascript?
 a. document.write()
@@ -33,12 +48,20 @@ b. console.log()
 c. window.alert
 d. All of the above
 
+Answer:- d
+
+Explaination:- all three methods are use to display data in javaScript like document.write() is use to display in webpage , console.log() is use to display data in console and window.alert() is use to create a popup alert. 
+
 
 6. How can a datatype be declared to be a constant type?
 a. const
 b. var
 c. let
 d. constant
+
+Answer:- a
+
+Explaination:- Const is use to declare a constant type because we can not re declare and re initialize const.
 
 7. What will be the output of the following code snippet?
 
@@ -51,6 +74,11 @@ a. Compilation Error
 b. 14
 c. Runtime Error
 d. 59
+
+Answer:- d
+
+Explaination:- because + concat a string it doesn't perform addition .
+
 
 8. What will be the output of the following code snippet?
 
@@ -65,6 +93,11 @@ a. al
 b. ale
 c. cal
 d. caler
+
+Answer:- a
+
+Explaination:- substring is a string method which is use to display data which index number is mention it displays that data only.
+
 
 9. What will be the output of the following code snippet?
 
@@ -81,12 +114,20 @@ b. x+y
 c. 128
 d. None
 
+Answer:- a
+
+Explaination:- in this it access the value that is declared in above and make an addition because its data type will be number.
+
 10. 
 When the switch statement matches the expression with the given labels, how is the comparison done?
 a. Both datatype and the result of the expression are compared.
 b. Only datatype is compared
 c. Only the value of the expression is compared
 d. None
+
+Answer:- a
+
+Explaination:- Both datatype and the result of the expression are compared.
 
 
 11. What keyword is used to check whether a given property is valid or not?
@@ -95,12 +136,19 @@ b. is in
 c. exists
 d. lies
 
+Answer:-a
+
+Explaination:- in keyword is use to check given property is valid.
+
 12. What is the use of the <noscript> tag in Javascript?
 a. The contents are displayed by non-js based browsers
 b. Clears all the cookies and cache
 c. Both a and b
 d. None
 
+Answer:- a
+
+Explaination:- It defines an alternate content to be displayed to users that have disabled scripts in their browser.
 
 13. 
 What will be the output of the following code snippet?
@@ -115,6 +163,10 @@ a. 1234
 b. 2341
 c. 2431
 d. 4321
+
+Answer:- c
+
+Explaination:- to console 2 and 4 thete is no timeout given they will directly print then it checks the time given in setTimeout
 
 14. 
 What will be the output of the following code snippet?
@@ -131,6 +183,9 @@ b. NaN
 c. 21
 d. None
 
+Answer:- c
+
+Explaination:- it will print 21 because we have are calling the value before initialization.
 
 15. What will be the output of the following code snippet?
 
@@ -148,5 +203,8 @@ b. [44,1,22,111]
 c. [111,44,1,22]
 d. [1,22,111,44]
 
+Answer:- 2 
+
+Explaination:- it will print b as it is because unshift add the item at te start of the array.
 
 ------------------------------------------
