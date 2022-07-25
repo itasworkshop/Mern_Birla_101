@@ -1,0 +1,52 @@
+React Concepts
+
+Angular --> Framwork --> less flexibilty --> rely on framework --> comparatively lesser customization --> SPA --> widely used into dashboard kind of application, real time data visualisation etc
+
+React --> Library --> more flexibilty --> repeatation of components
+
+
+Component --> basic building block for your web application
+
+JSX --> HTML + JavaScript
+
+DOM --> document object model
+consider html pages as document object for reading, manipulating web pages --> bring interactivity 
+
+HTML vs DOM
+1. DOM is modified by javascript
+2. browser automatically fixes error in source code to show some UI in browser
+
+DOM changes in React
+React DOM compares the elements and its children to revious ones and applies only necessary changes into DOM.
+
+Setting up React Envrionment
+1. Download and install Node.js --> npm, npx
+2. Install create-react-app
+npm install -g create-react-app
+3. Creat demo app using create react app
+npx create-react-app my-app
+4. Go to directory
+cd my-app
+5. Start your app
+npm start
+
+1) Perform Calculator program using react.
+2) Student Grade Calculator using react
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
