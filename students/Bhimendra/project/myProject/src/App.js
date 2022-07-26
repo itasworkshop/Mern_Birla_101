@@ -14,10 +14,11 @@ function App() {
       {/* <Calculator /> */}
       {/* <Grade/> */}
       {/* <Student /> */}
+
       <Toggle/>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login/>}/>
+        <Route path="/" element={<Login num="123"/>}/>
         <Route path="/logout" element={<Logout/>}/>
       </Routes>
       </BrowserRouter>
