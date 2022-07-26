@@ -1,3 +1,10 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+//GIT COMMAND to push the code 
+ git status
+ git pull
+ git add  students/Shiva/excercise/hello-app/   
+ git add  examples/concepts/package-lock.json examples/concepts/package.json 
+ git status
+ git commit -m "25 july task"
+  git push -u origin main
+//validate - 123 or less than 
+  2 doller = 79.76*2 =159.52 indian rupees

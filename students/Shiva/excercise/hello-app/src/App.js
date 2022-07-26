@@ -1,57 +1,59 @@
-// calcultor program
-import React from 'react'
 
 
-class App extends React.Component {
+import React, { useState } from "react";
+const App = () => {
+  const [num1, setNum1] = useState()
+  const [num2, setNum2] = useState()
+  const [newentry, setNewentry] = useState()
+  const [msg,setMsg] = useState(0)
+  const AddButton = () => {
+    const newentry = { num1: num1, num2: num2 };
+    console.log(newentry)
+    const total = parseInt(num1) + parseInt(num2);
+    console.log(total);
+    setNewentry(total);
+    console.log(setNewentry);
+  setMsg(total) 
 
-
-  constructor(props) {
-    super(props)
-    this.state = { num1: '', num2: '', total: '' }
+  }
+  const SubButton = () => {
+    const newentry = { num1: num1, num2: num2 };
+    console.log(newentry);
+    const total = parseInt(num1) - parseInt(num2);
+    console.log(total);
+    setNewentry(total);
+    setMsg(total) 
+  }
+  const MutliButton = () => {
+    const newentry = { num1: num1, num2: num2 };
+    console.log(newentry);
+    const total = parseInt(num1) * parseInt(num2);
+    console.log(total);
+    setNewentry(total);
+    setMsg(total) 
+  }
+  const DivButton = () => {
+    const newentry = { num1: num1, num2: num2 };
+    console.log(newentry);
+    const total = parseInt(num1) / parseInt(num2);
+    console.log(total);
+    setNewentry(total);
+    setMsg(total) 
   }
 
-
-  Add() {
-
-    this.setState({ total: parseInt(this.state.num1) + parseInt(this.state.num2) })
-    console.log(this.state)
-  }
-  Sub() {
-    this.setState({ total: parseInt(this.state.num1) - parseInt(this.state.num2) })
-    console.log(this.state)
-  }
-  Multi() {
-    this.setState({ total: parseInt(this.state.num1) * parseInt(this.state.num2) })
-    console.log(this.state)
-  }
-  Div() {
-    this.setState({ total: parseInt(this.state.num1) / parseInt(this.state.num2) })
-    console.log(this.state)
-  }
-  render() {
-    return (
-      <div className="mainContainer" style={{}}>
-        <h1>Calcultor</h1>
-
-        <input type="text" className="inputStyle" value={this.state.num1} onChange={(eve) => { this.setState({ num1: eve.target.value }) }} />
-        <br /><br />
-
-        <input type="text" className="inputStyle" value={this.state.num2} onChange={(eve) => { this.setState({ num2: eve.target.value }) }} />
-        <br /><br />
-
-        <button onClick={() => { this.Add() }} style={{ margin: "2px" }} >Addition</button>
-
-        <button onClick={() => { this.Sub() }} style={{ margin: "2px" }} >Sub</button>
-        <button onClick={() => { this.Multi() }} style={{ margin: "2px" }}  >Multiply</button>
-        <button onClick={() => { this.Div() }} style={{ margin: "2px" }}  >Divided</button>
-        <br /><br />
-        <input type="text" className="outStyle" value={this.state.total} />
-
-        <br /><br />
-      </div>
-    )
-  }
+  return (
+    <>
+      <h1> Student Calcultor</h1>
+      <input type="text" placeholder="Enter the Number1" value={num1} onChange={(e) => setNum1(e.target.value)} />
+      <br /><br />
+      <input type="text" placeholder="Enter the Number2" value={num2} onChange={(e) => setNum2(e.target.value)} />
+      <br /><br />
+      <button style={{ margin: "2px" }} onClick={AddButton}>Add</button>
+      <button style={{ margin: "2px" }} onClick={SubButton}>Sub</button>
+      <button style={{ margin: "2px" }} onClick={MutliButton}>Multi</button>
+      <button style={{ margin: "2px" }} onClick={DivButton}>Div</button>
+      <h1>Result is:{msg}</h1>
+    </>
+  )
 }
-
-
 export default App;
