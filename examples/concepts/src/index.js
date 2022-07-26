@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
+<<<<<<< HEAD
 
 
 function MyHello(){
@@ -16,9 +17,20 @@ function YourHello(){
 function LoginButton(props){
   return(
     <button onClick={props.onClick}>Login</button>
+=======
+//React DOM apply changes only where it requires.
+
+function tick() {
+  const elements = (
+    <div>
+      <h1>This is demo for Clock Tick.</h1>
+      <h2>This is {new Date().toString()}</h2>
+    </div>
+>>>>>>> 288ee7a50740b6cb5ec968da85f1ee6bd9f13328
   );
 }
 
+<<<<<<< HEAD
 function LogoutButton(props){
   return(
     <button onClick={props.onClick}>Logout</button>
@@ -75,3 +87,11 @@ class LoginComponent extends React.Component{
 ReactDOM.render(
   <LoginComponent />, document.getElementById('root')
 );
+=======
+  ReactDOM.render(elements, document.getElementById("root"));
+}
+
+setInterval(() => {
+  tick();
+}, 1000);
+>>>>>>> 288ee7a50740b6cb5ec968da85f1ee6bd9f13328
