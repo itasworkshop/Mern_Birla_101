@@ -33,7 +33,7 @@ function PassInput(props) {
     if( data ===passworrd && dyta === usernamme){
       setAlert("You've Sucessfully Logged in");
     } else {
-      setAlert("Incorrect Password try again");
+      setAlert("Incorrect Password or UserName try again");
     }
   };
   return (

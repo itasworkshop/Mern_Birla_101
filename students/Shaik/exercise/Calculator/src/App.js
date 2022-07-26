@@ -13,7 +13,7 @@ function App() {
      <br/>
      {/* <MarksCal/> */}
      {/* <SayHello/> */}
-     <Toggle />
+     <Toggle img1="./Images/D1.jpg" img2="./Images/D2.jpg" />
      <PassInput  username="Ahad" password="123"/>
      {/* <PassInput  password="123"/> */}
     </div>
