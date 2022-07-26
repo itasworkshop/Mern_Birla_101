@@ -1,16 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import Calculator from './component/Calculator';
-import Gradecal from './component/Grade_cal';
-import MarksCal from './component/MarksCal';
+// import Calculator from './component/Calculator';
+// import Gradecal from './component/Grade_cal';
+// import MarksCal from './component/MarksCal';
+import Toggle from './component/Toggle';
+import PassInput from './component/PassInput';
 
 function App() {
   return (
     <div className="App">
-     <Calculator/>
-     <Gradecal/>
+     {/* <Calculator/> */}
+     {/* <Gradecal/> */}
      <br/>
-     <MarksCal/>
+     {/* <MarksCal/> */}
+     {/* <SayHello/> */}
+     <Toggle />
+     <PassInput  username="Ahad" password="123"/>
+     {/* <PassInput  password="123"/> */}
     </div>
   );
 }
