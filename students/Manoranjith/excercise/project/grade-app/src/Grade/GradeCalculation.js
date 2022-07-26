@@ -8,6 +8,7 @@ import React from 'react';
 //       {id:104,name:"tom",cmarks:71,pmarks:65,mmarks:70}
 //       ];
 
+
 export default function App(props){
   return ( 
     <div >
@@ -17,7 +18,7 @@ export default function App(props){
         </div>
         <div>
             {props.name !== '' &&
-          <table cellSpacing={10}>
+          <table cellSpacing={10}  >
             <thead>
               <tr>
               <td>Student Name</td>
@@ -53,7 +54,7 @@ export default function App(props){
         </div>
         <div>
             {props.student.length > 0 &&
-        <table cellSpacing={10}>
+        <table cellSpacing={10} style={{ border:"1.5px solid white"}} >
         <thead>
               <tr>
               <td>Student Name</td>
@@ -93,6 +94,7 @@ export default function App(props){
 }
         </div>
       </header>
+
     </div>
   );
 }
