@@ -1,6 +1,8 @@
 import React from "react"
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { Calculator } from "./component/Calculator";
+import { Currency } from "./component/Currency";
+import { CurrencyProps } from "./component/CurrencyProps";
 import { Grade } from "./component/Grade";
 import { Login} from "./component/Login";
 import { Login2 } from "./component/Login2";
@@ -16,15 +18,18 @@ function App() {
       {/* <Grade/> */}
       {/* <Student /> */}
 
-      <Toggle/>
-      <BrowserRouter>
+      {/* <Toggle/> */}
+      {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login num="123"/>}/>
         <Route path="/logout" element={<Logout/>}/>
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
-      <Login2 pass="123" user="bhimendra"/>
+      {/* <Login2 pass="123" user="bhimendra"/> */}
+
+      <Currency/>
+      <CurrencyProps rupees="100" dollar="10"/>
 
      
       
