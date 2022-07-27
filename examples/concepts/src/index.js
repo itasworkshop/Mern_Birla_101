@@ -1,77 +1,92 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//import CurrencyMessage from './App';
 
-
-
-function MyHello(){
-  return <h1>Hello from my hello.</h1>;
-}
-
-
-function YourHello(){
-  return <h1>Hello from your hello.</h1>;
-}
-
-function LoginButton(props){
-  return(
-    <button onClick={props.onClick}>Login</button>
-  );
-}
-
-function LogoutButton(props){
-  return(
-    <button onClick={props.onClick}>Logout</button>
-  );
-}
-
-function SayHello(props){
-  const isTrue = props.isTrue;
-
-  if(isTrue){
-    return <MyHello />;
+function CurrencyMessage(props){
+  if(props.rupees >= 1000){
+    return <p>This is too much money.</p>;
   }else{
-    return <YourHello />;
+    return <p>This is not too much money.</p>;
   }
 }
 
-class LoginComponent extends React.Component{
+const unitName = {
+  r: 'rupees',
+  d: 'dollar'
+}
+
+function toRupees(dollar){
+  return dollar*80;
+}
+
+function toDollar(rupees){
+  return (rupees/80);
+}
+
+class CurrencyInput extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {isLoggedIn:false};
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    //this.state = {currency:''};
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleLoginClick(){
-    this.setState({isLoggedIn:false});
-  }
-
-  handleLogoutClick(){
-    this.setState({isLoggedIn:true});
+  handleChange(event){
+    //this.setState({currency:event.target.value});
+    this.props.onCurrencyChange(event.target.value);
   }
 
   render(){
-    const isLog = this.state.isLoggedIn;
-    let button;
+    //const currency = this.state.currency;
+    const currency = this.props.currency;
+    const unit = this.props.unit;
 
-    if(isLog){
-      button = <LoginButton onClick={this.handleLoginClick}/>;
-    }else{
-      button = <LogoutButton onClick={this.handleLogoutClick}/>;
-    }
+    return(
+
+      <fieldset>
+        <legend>Enter your currency in {unitName[unit]}.</legend>
+        <input value={currency} onChange={this.handleChange} />
+        <CurrencyMessage rupees={currency} />
+      </fieldset>
+    );
+  }
+}
+
+class Calculator extends React.Component{
+
+  constructor(props){
+    super(props);
+    this.state = {currency:'',unit:'r'};
+    this.handleDollarChange = this.handleDollarChange.bind(this);
+    this.handleRupeeChange = this.handleRupeeChange.bind(this);
+  }
+
+  handleRupeeChange(currency){
+    this.setState({'unit':'r',currency});
+  }
+
+  handleDollarChange(currency){
+    this.setState({'unit':'d',currency});
+  }
+
+  render(){
+    const currency = this.state.currency;
+    const unit = this.state.unit;
+
+    const rupees = unit === 'd' ? toRupees(currency):currency;
+    const dollar = unit === 'r' ? toDollar(currency):currency;
 
     return(
       <div>
-        <SayHello isTrue={isLog} />
-        {button}
+        <CurrencyInput unit='r' currency={rupees} onCurrencyChange={this.handleRupeeChange}/>
+        <CurrencyInput unit='d' currency={dollar} onCurrencyChange={this.handleDollarChange}/>
       </div>
-    );
-  } 
-
+    )
+  }
 }
 
+
 ReactDOM.render(
-  <LoginComponent />, document.getElementById('root')
+  <Calculator/>, document.getElementById('root')
 );

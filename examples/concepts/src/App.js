@@ -1,25 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function CurrencyMessage(props){
+  if(props.rupees >= 1000){
+    return <p>This is too much money.</p>;
+  }else{
+    return <p>This is not too much money.</p>;
+  }
 }
 
-export default App;
+export default CurrencyMessage;
