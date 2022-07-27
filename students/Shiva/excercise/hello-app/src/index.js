@@ -8,6 +8,7 @@ import ImageState from './Image_state';
 import PasswordState from './Password_state';
 import Login from './login_logout';
 import DollerConverter from './doller_converter';
+import Calculator from './currancy_Converter';
 // import One from './one';
 // import Second from './second';
 // import Props from './props';
@@ -17,21 +18,22 @@ import DollerConverter from './doller_converter';
 
 ReactDOM.render(
     <>
-        <App />
-        <Grade />
+        {/* <App />
+        <Grade /> */}
         {/* <Props/>
         <State/> */}
         {/* <One/> */}
         {/* <Second /> */}
-        <Button />
+        {/* <Button />
         <br />
         <ImageState />
-        <PasswordState />
-        <br />
+        <PasswordState /> */}
+        {/* <br />
         <br />
         <Login />
-        <DollerConverter/>
-
+        <DollerConverter/> */}
+{/* <Calculator/> */}
+<DollerConverter/>
     </>,
     document.getElementById("root")
 )

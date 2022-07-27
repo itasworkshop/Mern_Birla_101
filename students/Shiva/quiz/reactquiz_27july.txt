@@ -1,0 +1,28 @@
+React-Quiz
+
+Answer1. b)props
+Answer2.  b) the values
+  Answer3. b)action->dispatch->store->view
+  Answer4. d) all
+Answer5.  a)it allow us to test javascript object
+Answer6.  b) virutal Dom
+Answer7.   d)props
+Answer8.   b)internal storage of the component
+Answer9.   b)function component are light weight
+Answer10.  a)setstate
+Answer11.   c) both
+Answer12.   b) javascript lib
+Answer13.  b)reactdom.render()
+Answer14. html in react
+Answer15. b) {exp}
+Answer16.  a) extends React.compoent
+Answer17.  c)
+Answer18. d) the process through whic react updates the dom
+Answer19. b) its own states internally uncomponent:every state mutation
+Answer20. b) new add item
+Answer21. c) extends
+Answer22. a) routes
+Answer23. b) global
+Answer24.  b) redux
+Answer25. a) immutable global contect object
+           
