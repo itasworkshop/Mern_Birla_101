@@ -7,6 +7,7 @@ import { Grade } from "./component/Grade";
 import { Login} from "./component/Login";
 import { LoginProps } from "./component/LoginProps";
 import { Logout } from "./component/Logout";
+import { MultiCurrency } from "./component/MultiCurrency";
 import { Student } from "./component/Students";
 import { Toggle } from "./component/Toggle";
 
@@ -26,10 +27,12 @@ function App() {
         <Route path="/logout" element={<Logout/>}/>
       </Routes>
       </BrowserRouter> */}
-      <LoginProps pass="123" user="bhimendra"/>
+      {/* <LoginProps pass="123" user="bhimendra"/> */}
 
       {/* <Currency/>
       <CurrencyProps rupees="100" dollar="10"/> */}
+
+      <MultiCurrency />
 
      
       
