@@ -1,0 +1,210 @@
+React-MCQ-Set-1
+
+
+1	Arbitrary inputs of components in React are called
+A	Keys
+B	Props
+C	Elements
+D	Ref
+       Answer:- Props
+	
+2	How can you access the state of a component from inside of a member function?
+A	this.state
+B	this.values
+C	this.getState()
+D	this.prototype.stateValue
+
+	Answer:- this.values
+
+3	Which of the following is the correct data flow sequence of flux concept?
+A	Action->Dispatcher->View->Store
+B	Action->Dispatcher->Store->View
+C	Action->Store->Dispatcher->View
+D	None of the above
+
+        Answer:- Action->Dispatcher->Store->View
+
+	
+4	At the highest level, React components have lifecycle events that fall into
+A	Destruction
+B	Initialization
+C	State/Property Updates
+D	All of these
+         
+        Answer:-All of these
+	
+5	What is snapshot testing used for in react?
+A	It allows us to test Javascript objects
+B	It helps you write applications
+C	It provides clear, enduring assertions
+D	None of the above
+        
+        Answer:- None of the above
+	
+6	What of the following is used in React.js to increase performance?
+A	Original DOM
+B	Virtual DOM
+C	Both A and B.
+D	None of the above.
+      
+          Answer:- Virtual DOM
+	
+7	Which of the following acts as the input of a class-based component?
+A	Class
+B	Factory
+C	Render
+D	Props
+      
+        Answer:-Props
+
+        
+	
+8	What is a state in React?
+A	A permanent storage.
+B	Internal storage of the component.
+C	External storage of the component.
+D	None of the above.
+
+        Answer:- Internal storage of the component.
+	
+9	Regarding React js components, which of following statement is true?
+A	function components can have state
+B	function components are light weight
+C	class components are light weight
+D	class components are faster than function component
+
+        Answer:- function components are light weight
+	
+10	To update state in react functional component which hook is used
+A	setState
+B	useState
+C	Both of above
+D	None of above
+
+        Answer:- useState
+	
+11	Which of the following concepts is/are key to ReactJS?
+A	Event delegation model
+B	Component-oriented design
+C	Both of the above
+D	None of the above
+
+        Answer:- Both of the above
+	
+12	React is a _________.
+A	Web development Framework
+B	JavaScript Library
+C	jQuery
+D	Web Server
+
+        Answer:- JavaScript Library
+	
+13	Which ReactJS function renders HTML to the web page?
+A	render()
+B	ReactDOM.render()
+C	renders()
+D	ReactDOM.renders()
+      
+        Answer:- ReactDOM.render()
+	
+14	JSX allows us to write _____.
+A	jQuery in React
+B	Angular Code in React
+C	MySQL in React
+D	HTML in 
+
+        Answer:- HTML in React
+	
+15	What is the correct syntax to write expression in JSX?
+A	[ expression ]
+B	{ expression }
+C	{{ expression }}
+D	_expression
+
+        Answer:- { expression }
+	
+16	class component must include the _______ statement.
+A	extends React.Component
+B	extends React
+C	extends Component
+D	extends React.Component.All
+
+        Answer:- extends React.Component
+	
+17	"Consider the below function – which is the correct syntax of arrow function?
+Msg = function() {
+  return ""Good Morning"";
+}"
+A	Msg = () => {return "Good Morning";}
+B	Msg = () => "Good Morning";
+C	Both A. and B.
+D	None of the above
+
+         Answer:- Both A. and B.
+	
+18	What is Reconciliation?
+A	The process through which React deletes the DOM.
+B	The process through which React updates and deletes the component.
+C	It is a process to set the state.
+D	The process through which React updates the DOM.
+
+         Answer:-The process through which React updates the DOM.
+	
+19	Controlled Component vs Uncontrolled Component
+A	Controlled Components: every state mutation will have an associated handler function; Uncontrolled Components: store their own states internally
+B	Controlled Components: store their own states internally; Uncontrolled Components: every state mutation will have an associated handler function
+C	Controlled Components: A component who is so good at controlling itself; Uncontrolled Components: A component who has no idea how to control itself
+D	Controlled Components: every state mutation does not have an associated handler function; Uncontrolled Components: does not store their own states internally
+	
+        Answer:- Controlled Components: every state mutation will have an associated handler function; Uncontrolled Components: store their own states internally.
+	
+
+20	What is the “key” prop?
+A	“Key” prop is just there to look pretty and there is no benefit whatsoever.
+B	“Key” prop is a way for React to identify a newly added item in a list and compare during the “diffing” algorithm.
+C	It is one of the attributes in HTML.
+D	All I know is that it is NOT commonly used in array.
+
+        Answer:-“Key” prop is a way for React to identify a newly added item in a list and compare during the “diffing” algorithm.
+	
+	
+21	To create a class inheritance, use the ________ keyword.
+A	 create
+B	 inherits
+C	 extends
+D	 this
+
+        Answer:- extends
+	
+22	Routes is a collection of
+A	Route
+B	Switch
+C	Link
+D	None
+
+          Answer:- Route
+	
+23	Redix is  ______?
+A	Local State container
+B	Global state container
+C	Props container
+D	None
+
+        Answer:- Global state container
+	
+24	Which one is suitable for larger application state management?
+A	contextAPI
+B	Redux
+C	Axios
+D	None
+
+        Answer:-Redux
+	
+25	React.createContext () gives _____?
+A	Immutable global context object
+B	mutable global context object
+C	Any one 
+D	None
+     
+        
+       Answer:- Immutable global context object
