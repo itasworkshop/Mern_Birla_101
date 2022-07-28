@@ -1,0 +1,285 @@
+React-MCQ-Set-1
+
+
+1	Arbitrary inputs of components in React are called
+A	Keys
+B	Props
+C	Elements
+D	Ref
+
+
+  ans: B=props.
+
+reason:props are the inputs which are immutable/ only readable and the rest of the elements can be changed
+
+
+	
+2	How can you access the state of a component from inside of a member function?
+A	this.state
+B	this.values
+C	this.getState()
+D	this.prototype.stateValue
+
+
+ans: a: this.state
+
+reason: It is a predefined keyword which holds the current state of the component  and the state will be present within component. 
+state cannot be passed
+
+
+	
+3	Which of the following is the correct data flow sequence of flux concept?
+A	Action->Dispatcher->View->Store
+B	Action->Dispatcher->Store->View
+C	Action->Store->Dispatcher->View
+D	None of the above
+
+  ans:B action->dispatcher->store->view
+
+   reason:  first the action will be created based on the conditions present in store the Dispatcher will perform the action on Store and  finally the result will be sent to the ui/View
+
+
+
+	
+4	At the highest level, React components have lifecycle events that fall into
+A	Destruction
+B	Initialization
+C	State/Property Updates
+D	All of these
+
+    ans:D   all of these
+
+    reason: we can destruct the objects and initialize new variables and state can be assigned with props. props can be accessed. 
+	
+5	What is snapshot testing used for in react?
+A	It allows us to test Javascript objects
+B	It helps you write applications
+C	It provides clear, enduring assertions
+D	None of the above
+         
+        ans: C: it provides clear, enduring assertions
+	reason : the snapshot is taken at the updating phase of lifecycle methods . we can know/check the props/the state values which are about to update
+
+
+	
+6	What of the following is used in React.js to increase performance?
+A	Original DOM
+B	Virtual DOM
+C	Both A and B.
+D	None of the above.
+         
+        ans: B: virtual dom
+       reason: virtual dom is the copy of actual dom. Its main functionality is to check for the updates each time the component is renderd and that updates
+                   are compared with the actual dom and update only those changes to the dom.
+
+	
+7	Which of the following acts as the input of a class-based component?
+A	Class
+B	Factory
+C	Render
+D	Props
+	   
+        ans : d:props
+          reason : -  props are the only values/input which can be passed from one component to another component. and later on props can be updated.
+
+
+8	What is a state in React?
+A	A permanent storage.
+B	Internal storage of the component.
+C	External storage of the component.
+D	None of the above.
+        
+       ans:- B: internal storage of the component
+
+          reason :- states are like a container which holds the props/values. states cannot be passed from one component to another
+       
+       
+	
+9	Regarding React js components, which of following statement is true?
+A	function components can have state
+B	function components are light weight
+C	class components are light weight
+D	class components are faster than function component
+         
+         ans: B:function components are light weight
+               reason: function components are light weight than class components why beacuse no much of this keyword and it does not need to invoke any  
+  		constructor and render method.
+
+
+	
+10	To update state in react functional component which hook is used
+A	setState
+B	useState
+C	Both of above
+D	None of above
+
+
+      ans: A: setState
+
+       reason:-  setState is the hook/keyword which is introduced to update the state in  the functional component
+      
+
+
+	
+11	Which of the following concepts is/are key to ReactJS?
+A	Event delegation model
+B	Component-oriented design
+C	Both of the above
+D	None of the above
+ 
+    ans: C: both of the above.
+
+reason:  in react each component is developed independently and can be used/refferd into another components
+
+
+ 
+	
+12	React is a _________.
+A	Web development Framework
+B	JavaScript Library
+C	jQuery
+D	Web Server
+
+      Ans: B: JavaScript Library
+
+      reason: react is bsically driven by javascript. javascript is the core of reactjs. it works mostly on javascript concepts.
+	
+13	Which ReactJS function renders HTML to the web page?
+A	render()
+B	ReactDOM.render()
+C	renders()
+D	ReactDOM.renders()
+    
+       ans b:- ReactDOM.render()
+          reason:   dom is a basically a documentobjectmodel which consists of the root and  renders html to webpage making use of jsx.
+	
+14	JSX allows us to write _____.
+A	jQuery in React
+B	Angular Code in React
+C	MySQL in React
+D	HTML in React
+
+        Ans: d: html in react
+
+         reason: jsx is the one which converts the html tags in the way that the javascript understands it.
+	
+15	What is the correct syntax to write expression in JSX?
+A	[ expression ]
+B	{ expression }
+C	{{ expression }}
+D	_expression
+
+        ans: { expression }
+      
+        reason: html tags can't have the javascript exprerssions  within the tags so the expression will be passed as object using curly braces {} 
+	
+16	class component must include the _______ statement.
+A	extends React.Component
+B	extends React
+C	extends Component
+D	extends React.Component.All
+
+         Ans: A:extends React.Component
+        
+          reason: every file  in react is considered as component. so whenever we create a class in react it should extend react so that it is 
+                 inherited as a react component. if not the class created without extending react does not have the functionalities of react.  
+                   
+	
+17	"Consider the below function – which is the correct syntax of arrow function?
+Msg = function() {
+  return ""Good Morning"";
+}"
+A	Msg = () => {return "Good Morning";}
+B	Msg = () => "Good Morning";
+C	Both A. and B.
+D	None of the above
+
+
+    ANs b: Msg = () => "Good Morning";
+
+        reason: In react any variable can be converted into function using arrow key and braces 
+		and when there is only statement it does not need any return statement.
+        
+        
+	
+18	What is Reconciliation?
+A	The process through which React deletes the DOM.
+B	The process through which React updates and deletes the component.
+C	It is a process to set the state.
+D	The process through which React updates the DOM.
+             
+        ans: B The process through which React updates and deletes the component.
+        
+	
+19	Controlled Component vs Uncontrolled Component
+A	Controlled Components: every state mutation will have an associated handler function; Uncontrolled Components: store their own states internally
+B	Controlled Components: store their own states internally; Uncontrolled Components: every state mutation will have an associated handler function
+C	Controlled Components: A component who is so good at controlling itself; Uncontrolled Components: A component who has no idea how to control itself
+D	Controlled Components: every state mutation does not have an associated handler function; Uncontrolled Components: does not store their own states internally
+	  
+      ans:
+         
+
+
+
+20	What is the “key” prop?
+A	“Key” prop is just there to look pretty and there is no benefit whatsoever.
+B	“Key” prop is a way for React to identify a newly added item in a list and compare during the “diffing” algorithm.
+C	It is one of the attributes in HTML.
+D	All I know is that it is NOT commonly used in array.
+
+	ans: B: “Key” prop is a way for React to identify a newly added item in a list and compare during the “diffing” algorithm.
+
+                 reason: every object values holds a unique key so that it will become easy to track the corresponding object and update/change only that. 
+
+        
+	
+21	To create a class inheritance, use the ________ keyword.
+A	 create
+B	 inherits
+C	 extends
+D	 this
+   
+              ans: c: extends
+             
+               
+ 
+22	Routes is a collection of
+A	Route
+B	Switch
+C	Link
+D	None
+
+              ans: A: route	
+
+
+23	Redix is  ______?
+A	Local State container
+B	Global state container
+C	Props container
+D	None
+
+        Ans: Global state container
+        reason: redux is the centeral store which consists and maintains all the data/state from the entire application. And based on the request made to store 
+		it gives out  the required output
+
+24	Which one is suitable for larger application state management?
+A	contextAPI
+B	Redux
+C	Axios
+D	None
+
+            Ans: A: redux
+	reason:  redux is the centeral store which consists and maintains all the data/state from the entire application. And based on the request made to store 
+		it gives out  the required output
+
+      		
+	
+25	React.createContext () gives _____?
+A	Immutable global context object
+B	mutable global context object
+C	Any one 
+D	None
+
+         ans:B: mutable global context object
+         reson: the context created can be shared to other components and can updated in the shared component.
