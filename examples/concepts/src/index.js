@@ -1,92 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import CurrencyMessage from './App';
 
-function CurrencyMessage(props){
-  if(props.rupees >= 1000){
-    return <p>This is too much money.</p>;
-  }else{
-    return <p>This is not too much money.</p>;
-  }
-}
+//React Hook --> useState()
+//Returns a stateful value, and a function to update it.
+//What is useState()?
 
-const unitName = {
-  r: 'rupees',
-  d: 'dollar'
-}
+function MyComponentWithHook(){
 
-function toRupees(dollar){
-  return dollar*80;
-}
+  const[user,setUser] = useState({name:"Rajesh",age:20});
 
-function toDollar(rupees){
-  return (rupees/80);
-}
-
-class CurrencyInput extends React.Component{
-
-  constructor(props){
-    super(props);
-    //this.state = {currency:''};
-    this.handleChange = this.handleChange.bind(this);
+  const handleUpdateUser = (event) => {
+    //setUser({username:"suraj",age:25});
+    //{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
+    const{name,value} = event.target;
+    console.log({[name]:value});
+    setUser({ ...user, [name]:value});
   }
 
-  handleChange(event){
-    //this.setState({currency:event.target.value});
-    this.props.onCurrencyChange(event.target.value);
-  }
+  return(
+    <div>
+      <p>My name is {user.username}</p>
+      <p>and my age is {user.age} years.</p>
 
-  render(){
-    //const currency = this.state.currency;
-    const currency = this.props.currency;
-    const unit = this.props.unit;
-
-    return(
-
-      <fieldset>
-        <legend>Enter your currency in {unitName[unit]}.</legend>
-        <input value={currency} onChange={this.handleChange} />
-        <CurrencyMessage rupees={currency} />
-      </fieldset>
-    );
-  }
-}
-
-class Calculator extends React.Component{
-
-  constructor(props){
-    super(props);
-    this.state = {currency:'',unit:'r'};
-    this.handleDollarChange = this.handleDollarChange.bind(this);
-    this.handleRupeeChange = this.handleRupeeChange.bind(this);
-  }
-
-  handleRupeeChange(currency){
-    this.setState({'unit':'r',currency});
-  }
-
-  handleDollarChange(currency){
-    this.setState({'unit':'d',currency});
-  }
-
-  render(){
-    const currency = this.state.currency;
-    const unit = this.state.unit;
-
-    const rupees = unit === 'd' ? toRupees(currency):currency;
-    const dollar = unit === 'r' ? toDollar(currency):currency;
-
-    return(
-      <div>
-        <CurrencyInput unit='r' currency={rupees} onCurrencyChange={this.handleRupeeChange}/>
-        <CurrencyInput unit='d' currency={dollar} onCurrencyChange={this.handleDollarChange}/>
-      </div>
-    )
-  }
+      <label>
+        Name:
+        <input type="text" name="name" value={user.username} onChange={handleUpdateUser}/>
+      </label>
+      <label>
+        Age:
+        <input type="text" name="age" value={user.age} onChange={handleUpdateUser}/>
+      </label>
+    </div>
+    
+  );
 }
 
 
 ReactDOM.render(
-  <Calculator/>, document.getElementById('root')
+  <MyComponentWithHook />, document.getElementById('root')
 );
+
