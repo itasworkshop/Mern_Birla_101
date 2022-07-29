@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 
 export const Grade=()=>{
-    const [marks,setMarks]=useState(0)
+    const [marks,setMarks]=useState({mmarks:90,pmarks:80,cmarks:70})
     const [show,setShow]=useState("")
+    console.log(marks)
     const total= Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks)
     const data=(Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks))/3
     const gradecalc=()=>{
@@ -22,7 +23,7 @@ export const Grade=()=>{
 
     return(
         <div>
-            <h2>Grade</h2>
+            <h2>Grade Calculator</h2>
             <input type="text" onChange={(e)=>setMarks({...marks,mmarks:e.target.value})}/>
             <input type="text" onChange={(e)=>setMarks({...marks,pmarks:e.target.value})} />
             <input type="text" onChange={(e)=>setMarks({...marks,cmarks:e.target.value})}/>
