@@ -16,7 +16,7 @@ function App() {
   return (
     <div >
       {/* <Calculator /> */}
-      {/* <Grade/> */}
+      <Grade/>
       {/* <Student /> */}
 
       {/* <Toggle/> */}
@@ -32,7 +32,7 @@ function App() {
       {/* <Currency/>
       <CurrencyProps rupees="100" dollar="10"/> */}
 
-      <MultiCurrency />
+      {/* <MultiCurrency /> */}
 
      
       

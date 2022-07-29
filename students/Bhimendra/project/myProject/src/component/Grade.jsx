@@ -1,16 +1,18 @@
 import React, { useState } from "react"
 
 export const Grade=()=>{
+    const [marks,setMarks]=useState(0)
     const [grade,setGrade]=useState(0)
     const [show,setShow]=useState("")
     const gradecalc=()=>{
-        if(grade>100){
+        const data=(Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks))/3
+        if(data>100){
             setShow("Percentage should be in between 0-100")
-        }else if(grade>90 && grade<=100){
+        }else if(data>90 && data<=100){
             setShow("Grade A")
-        }else if(grade>80 && grade<=90){
+        }else if(data>80 && data<=90){
             setShow("Grade B")
-        }else if(grade>70 && grade<=80){
+        }else if(data>70 && data<=80){
             setShow("Grade C")
         }else {
             setShow("Failed")
@@ -21,9 +23,14 @@ export const Grade=()=>{
     return(
         <div>
             <h2>Grade</h2>
-            <input type="text" placeholder="Enter Percentage" onChange={(e)=>setGrade(e.target.value)}/>
+            <input type="text" onChange={(e)=>setMarks({...marks,mmarks:e.target.value})}/>
+            <input type="text" onChange={(e)=>setMarks({...marks,pmarks:e.target.value})} />
+            <input type="text" onChange={(e)=>setMarks({...marks,cmarks:e.target.value})}/>
             <button onClick={()=>gradecalc()}>Submit</button>
-            <h4>Percentage is {grade} and Grade is {show}</h4>
+            <h4>Mmarks:-{marks.mmarks}</h4>
+            <h4>Pmarks:-{marks.pmarks}</h4>
+            <h4>Cmarks:-{marks.cmarks}</h4>
+            <h4>Total Marks is {Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks)} Percentage is {(Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks))/3}% and Grade is {show}</h4>
             <hr />
         </div>
     )
