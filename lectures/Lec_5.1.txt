@@ -1,0 +1,6 @@
+React Hooks
+
+function based components are stateless, class based components those are stateful.
+
+React Hook --> enables functional based compoents to have state
+1) useState
