@@ -1,0 +1,205 @@
+*{
+   margin:0;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   box-sizing: border-box;
+   COLOR:black;
+   
+}
+
+ 
+ 
+ img{
+    width:70px;
+    background:#333;
+ }
+ li{
+    float: left;
+    overflow: hidden;
+ }
+
+li a{
+    margin-top: 2px;
+    margin-left: 60px;
+    width:100px;
+    display :block;
+    padding:20px 15px;
+    text-decoration: none;
+    font-family: arial;
+    color:black;
+    text-align: center;
+    
+}
+li a:hover{
+    background: gray;
+    text-transform: uppercase;
+}
+.nav img{
+    position: relative;
+}
+
+/* login page css */
+
+.login-form-container{position:fixed;
+    top:-100;
+    left: 0;
+    min-height: 100vh;
+    z-index: 10000;
+    width:100%;
+    background: rgba(0,0,0,0.7);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}   
+.login-form-container .btn{
+    display: inline-block ;     
+    margin-top: 1rem;
+    color:black;
+    background: orange;
+    padding:.8rem 3rem;
+    border:1rem solid var(--orange); 
+    cursor:pointer;
+    font-size: 1.5rem;
+}
+.conatiner{
+    background-color: black;
+}
+.login-form-container form{
+    margin:2rem;
+    padding:1.5rem 2rem;
+    border-radius:.5rem;
+    background: #fff ;
+    width: 50rem;
+}
+.login-form-container form h1{
+    font-size: 3rem;
+    text-transform: unset;
+    text-align: center; 
+    color:#444;
+    transform: uppercase ;
+    padding:1rem 0;
+
+}
+.login-form-container form .box{
+    width:100%;
+    padding:rem;
+    font-size:1.7rem;
+    color:#333;
+    margin:.6rem 0;
+    border:.1rem solid rgba(0,0,0,0.3);
+
+
+}
+.login-form-container form .box:focus{
+    background-color: var(--orange);
+}
+.login-form-container form #remember  {
+    margin:2rem 0;
+
+}
+
+.login-form-container label{
+    font-size: 1.5rem;
+    color:black;
+
+}
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+}
+.login-form-container form p{
+    padding:.5rem;
+    font-size:1.5rem;
+    color:black;
+}
+.login-form-container form p a{
+    color:var(--orange);
+}
+.login-form-container form p :hover{
+    color:red;
+    text-decoration: underline;
+}
+.login-form-container from p a:active{
+    color:greenyellow;
+}
+.login-form-container #formclose{
+    position: absolute;
+    top:2rem; right:3rem;
+    font-size: 5rem;
+    cursor: pointer;
+}
+.footer label{
+    color:black;
+    
+}
+/* home section */
+.Home{
+    padding:2rem 9%;
+    display: flex;
+    align-items: center;
+    flex-flow:column;
+    position: relative;
+    z-index: 0;
+}
+
+ .Home h3{
+   margin-top: 6rem;
+    font-size: 4rem;
+    color:yellow;
+    text-transform: uppercase;
+    text-shadow: .3rem .5rem rgba(0,0,0,0.1);
+}
+ .Home p{
+    font-size: 2.5rem;
+    color:snow;
+    padding: .5rem;
+    
+}
+.Home a{
+    color:rgba(0,0,0,0.8);
+    font-size: 2rem;
+}
+.homesection {
+    background-image: url(../components/img/nightsky.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width:100%;
+    height: 100vh;;
+   }
+/* .one{
+    color:black;
+    position:relative;
+    top:8rem;
+    
+}
+/* packages css */
+
+.packages h3 {text-align: center;
+   
+    
+}
+.packages p{
+    font-size: 3rpem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+} 
+
+.table ,td ,th ,tr {
+    background-color: rgb(171, 167, 167);
+    color:snow;
+}
+
+/* book */
+.heading{
+    background-image: url(../components/img/supply.jpg);
+    background-position: center;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer{
+    background-color: blue;
+}
+
+    
