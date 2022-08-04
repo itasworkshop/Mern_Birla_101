@@ -1,0 +1,86 @@
+MongoDB 
+
+Data --> usefull information
+Database Management System[DBMS] --> used for organising data
+RDBMS --> Relational Database Management System
+we organise our data in terms of tables(rows and columns) and one table is related with another table.
+
+
+Departments --> HR,Sales,Accounting, Quality,Legal
+
+dept_id		dept_name		location
+111			HR					Block-A
+222			Accounting 	Block-B
+333			Sales				Block-C
+
+Employees --> 
+emp_id		emp_name			salary		job				dept
+101			Rajesh			50000			manager			222	
+102			Suraj				40000			salesman			333	
+
+RDBMS Example
+sql server --> Microsoft
+oracle --> oracle
+mysql/mariaDb(Linux/Unix env) --> open source --> oracle supprots
+PostgreSql --> open source
+sqllite --> dev purpose only
+DB2 --> IBM
+Azure Sql --> cloud Microsoft
+Sybase --> open source
+
+SQL --> structured query language
+to interact with data as well as schema
+
+create table emp(emp_id number, ename varchar2(30), salary number, dept_id number);
+
+describe emp;
+
+insert into emp values(101,'Rajesh',50000,111);
+insert into emp values(103,'Tom',60000,222);
+
+select emp_id,ename,salary,dept_id from emp;
+select emp_id,ename from emp;
+select * from emp;
+
+select * from emp where dept_id = 111;
+select * from emp where dept_id = 111 and ename like 'Suraj';
+
+select * from emp order by emp_id asc;
+select ename,salary ,(salary+500) as bonus from emp;
+
+DML--> Data Manipulation language
+update emp set salary=70000 where ename like 'Rajesh'; 
+delete from emp where emp_id = 102;
+
+commit and rollback
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
