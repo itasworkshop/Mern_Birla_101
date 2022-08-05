@@ -1,0 +1,17 @@
+import React, { useState } from 'react'
+
+function Toggle(props) {
+  const [play,setPlay]=useState(true);
+  const toggleimage=()=> setPlay(!play)
+  return (
+    <div>
+
+      <button onClick={toggleimage} >Toggle image </button> 
+      <br />
+      {play && <img src={props.img1} alt='Saniya' width="20%"/>}
+      {!play && <img src={props.img2} alt='SaniyaShot'/>}
+    </div>
+  )
+}
+
+export default Toggle

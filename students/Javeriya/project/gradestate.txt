@@ -1,0 +1,42 @@
+import React, {useState} from "react";
+
+export const Gradeusestate =()=>{
+    const [marks,setMarks]=useState({mmarks:90,pmarks:80,cmarks:70,bmarks:85})
+    const [show,setShow]=useState("")
+    console.log(marks)
+    const total= Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks)+Number(marks.bmarks)
+    const data=(Number(marks.mmarks)+Number(marks.pmarks)+Number(marks.cmarks)+Number(marks.bmarks))/4
+    const gradecalculator=()=>{
+        if(data>100){
+            setShow("Percentage should be in between 0-100")
+        }else if(data>90 && data<=100){
+            setShow("Grade A")
+        }else if(data>80 && data<=90){
+            setShow("Grade B")
+        }else if(data>70 && data<=80){
+            setShow("Grade C")
+        }else if(data>60 && data<=70){
+            setShow("Grade D")   
+        }else {
+            setShow("Failed")
+        }
+        
+    }
+
+    return(
+        <div>
+            <h2>Grade Calculator</h2>
+            <input type="text" onChange={(e)=>setMarks({...marks,mmarks:e.target.value})}/>
+            <input type="text" onChange={(e)=>setMarks({...marks,pmarks:e.target.value})} />
+            <input type="text" onChange={(e)=>setMarks({...marks,cmarks:e.target.value})}/>
+            <input type="text" onChange={(e)=>setMarks({...marks,bmarks:e.target.value})}/>
+            <button onClick={()=>gradecalculator()}>Submit</button>
+            <h3>Mmarks:-{marks.mmarks}</h3>
+            <h3>Pmarks:-{marks.pmarks}</h3>
+            <h3>Cmarks:-{marks.cmarks}</h3>
+            <h3>bmarks:-{marks.bmarks}</h3>
+            <h3>Total Marks is {total} Percentage is {data}% and Grade is {show}</h3>
+            <hr />
+        </div>
+    )
+}
