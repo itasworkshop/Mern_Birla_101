@@ -1,0 +1,44 @@
+RDBMS vs NoSQL Databases
+
+1) MongoDb --> Document Oriented DB
+2) DynamoDb
+3) Cassendra
+4) CouchDb
+5) Redis
+6) HBase
+
+
+
+
+
+1) RDBMS uses sql to interact/ Not Only SQL is used to interact
+2) RDBMS --> structured --> table/schema/row-column
+Semi and UnStructured Data --> NoSQL 
+
+
+MongoDB
+--> stores data as BSon--> Binary JSON very much like JSON data
+--> we don't create table --> we create collection --> collection of documents
+
+-> what is _id?
+answer:
+_id --> unique id assigned by mongodb to each document
+can we give our own _id?
+yes we can, otherwise mongodb automatically assigns one id to each document.
+
+how to create collections?
+how to create douments in mongodb?
+save() method insert() method
+can i have duplicate id in mongodb?
+
+Query -->
+insert, save, insertmany
+update() vs updateMany()
+
+
+
+
+
+
+
+

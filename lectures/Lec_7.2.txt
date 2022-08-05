@@ -1,0 +1,199 @@
+C:\Program Files\MongoDB\Server\5.0\bin>mongo
+MongoDB shell version v5.0.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("63e398de-4902-465f-baa6-144a747b5b86") }
+MongoDB server version: 5.0.5
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-08-05T09:27:05.411+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs;
+HR       0.000GB
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+praveen  0.000GB
+test     0.003GB
+> use test;
+switched to db test
+> show collections;
+mynew
+mynewcoll
+student
+student1
+student2
+student3
+weather
+> db.student.find()
+{ "_id" : ObjectId("61b085d5be11ba527061821e"), "rollno" : 101, "name" : "Suraj", "grade" : "A", "pmarks" : 67, "cmarks" : 75 }
+{ "_id" : ObjectId("61b085d5be11ba527061821f"), "rollno" : 102, "name" : "Tom", "grade" : "B", "pmarks" : 77, "cmarks" : 75 }
+{ "_id" : ObjectId("61b085d5be11ba5270618220"), "rollno" : 103, "name" : "John", "grade" : "C", "pmarks" : 60, "cmarks" : 55 }
+{ "_id" : ObjectId("61b186e08fa53b26a5dffe0b"), "rollno" : 101, "name" : "Tommy", "grade" : "D" }
+{ "_id" : ObjectId("61b1874e8fa53b26a5dffe0d"), "rollno" : 101, "name" : "Tommy", "grade" : "d" }
+{ "_id" : ObjectId("61b2d1129dc869b4bd103ace"), "rollno" : 101, "name" : "Jimmy", "grade" : "B", "intro" : "This is Jimmy, the cricket team head." }
+> db.birlasoft.save({name:"Rajesh"})
+WriteResult({ "nInserted" : 1 })
+> show collections;
+birlasoft
+mynew
+mynewcoll
+student
+student1
+student2
+student3
+weather
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+> db.birlasoft.save({name:"Suraj"})
+WriteResult({ "nInserted" : 1 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+> db.birlasoft.save({name:"Suraj",subjects:['cs','ec','it']})
+WriteResult({ "nInserted" : 1 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+> db.birlasoft.save({_id:20, name:"Tom"})
+WriteResult({ "nMatched" : 0, "nUpserted" : 1, "nModified" : 0, "_id" : 20 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+> db.birlasoft.insert({_id:20, name:"Tom"})
+WriteResult({
+        "nInserted" : 0,
+        "writeError" : {
+                "code" : 11000,
+                "errmsg" : "E11000 duplicate key error collection: test.birlasoft index: _id_ dup key: { _id: 20.0 }"
+        }
+})
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+> db.birlasoft.insert({_id:21, name:"Tom"})
+WriteResult({ "nInserted" : 1 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.find({$where: "this.name=='Tom'"})
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.find({$where: "this.name=='Suraj'"})
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.update({ "name:'Suraj'"},{$set:{"name:'Lokesh'"}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:36
+> db.birlasoft.update({name:'Suraj'},{$set:{name:'Lokesh'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.update({name:'Lokesh'},{$set:{name:'Suraj'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Suraj" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Suraj", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.updateMany({name:'Suraj'},{$set:{name:'Lokesh'}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9cd49593da0dd55dae9c"), "name" : "Rajesh" }
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Lokesh", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.deleteOne({})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Lokesh", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.tes.find()
+> db.test.find()
+> db.student1.find()
+{ "_id" : ObjectId("61b09331be11ba5270618221"), "rollno" : 101, "name" : "Suraj", "grade" : "A", "pmarks" : 67, "cmarks" : 75 }
+{ "_id" : ObjectId("61b09331be11ba5270618222"), "rollno" : 102, "name" : "Tom", "grade" : "B", "pmarks" : 77, "cmarks" : 75 }
+{ "_id" : ObjectId("61b09331be11ba5270618223"), "rollno" : 103, "name" : "John", "grade" : "C", "pmarks" : 60, "cmarks" : 55 }
+> db.student.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 6 }
+> db.student.find()
+> db.birlasoft.find({$where: "this.name=='Suraj'"})
+> db.birlasoft.find({$where: "this.name=='Lokesh'"})
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Lokesh", "subjects" : [ "cs", "ec", "it" ] }
+> db.birlasoft.find({$where: "this.name=='Tom'"})
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.find({$where: "_id==20"})
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Executor error during find command :: caused by :: ReferenceError: _id is not defined :\n@:1:15\n",
+        "code" : 139,
+        "codeName" : "JSInterpreterFailure"
+}
+> db.birlasoft.find({$where: "id==20"})
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Executor error during find command :: caused by :: ReferenceError: id is not defined :\n@:1:15\n",
+        "code" : 139,
+        "codeName" : "JSInterpreterFailure"
+}
+> db.birlasoft.find({$where: "this.name=='Tom'"})
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.find({$where: "this._id==20"})
+{ "_id" : 20, "name" : "Tom" }
+> db.student.find()
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Lokesh", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 20, "name" : "Tom" }
+{ "_id" : 21, "name" : "Tom" }
+> db.birlasoft.find({$where: "this._id==20"})
+{ "_id" : 20, "name" : "Tom" }
+> db.birlasoft.deleteOne({$where: "this._id==20"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.birlasoft.find()
+{ "_id" : ObjectId("62ec9d219593da0dd55dae9d"), "name" : "Lokesh" }
+{ "_id" : ObjectId("62ec9d499593da0dd55dae9e"), "name" : "Lokesh", "subjects" : [ "cs", "ec", "it" ] }
+{ "_id" : 21, "name" : "Tom" }
+>
