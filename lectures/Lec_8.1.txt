@@ -1,0 +1,73 @@
+Server Side Programming
+
+client-server architecture
+
+client--> who is requesting
+server--> who is entertaing that request
+
+Operations
+--> Calculations
+--> Database CRUD
+--> file operations
+--> API(Application Programing Interface)
+
+
+Node js --> provides envrionment for JS backend or server side programing
+
+Back-end --> server + API + ORM + Middleware + Database
+
+//whats difference between require and import?
+
+what is express?
+
+Express4.18.1
+Fast, unopinionated, minimalist web framework for Node.js
+
+Steps for setting up Express App?
+1) create a directory
+mkdir hello-express
+cd hello-express
+
+2) Initialise node project
+npm init
+
+3) install express module
+npm install express
+
+4) create app.js in project and put below
+const express = require('express')
+const app = express()
+const port = 3000
+
+//
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+5) running the application
+node app.js
+
+HTTP protocol
+used for communicating web application
+
+Methods
+1) GET request --> for fetching or getting data from server
+
+2) POST request
+3) PUT request
+4) DELETE request
+
+codes
+1) 200 --> status code success
+2) 404 --> resource not found
+
+Hands on --> accept params
+1) student grade calculator using express backend.
+2) Calculator using express backend.
+
+
