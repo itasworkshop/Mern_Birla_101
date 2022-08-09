@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4444
+const port = 4000
 
 
 app.get("/calc/:num1/:num2", (req, res) => {
@@ -20,8 +20,10 @@ app.get("/grade/:num", (req, res) => {
     res.send("Grade B");
   } else if (req.params.num > 70 && req.params.num <= 80) {
     res.send("Grade C");
-  } else if (req.params.num <= 70) {
+  } else if (req.params.num <= 70 && req.params.num>0) {
     res.send("Failed");
+  }else if(req.params.num>100){
+    res.send("Enter between 0-100 number")
   }
 });
 
