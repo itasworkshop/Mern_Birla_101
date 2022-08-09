@@ -9,7 +9,7 @@ app.get("/calc/:num1/:num2", (req, res) => {
   const multiply = Number(req.params.num1) * Number(req.params.num2);
   const division = Number(req.params.num1) / Number(req.params.num2);
   res.send(
-    `"Hello this is addition page response!"  ${addition}  "Hello this is substraction page response!"  ${substraction}  "Hello this is multiplication page response!"  ${multiply}  "Hello this is division page response!"  ${division}`
+    `Addition:--   ${addition} , Substraction:--  ${substraction} , Multiplication:--  ${multiply} , Division:-- ${division}`
   );
 });
 
