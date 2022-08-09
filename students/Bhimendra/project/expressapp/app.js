@@ -20,9 +20,9 @@ app.get("/grade/:num", (req, res) => {
     res.send("Grade B");
   } else if (req.params.num > 70 && req.params.num <= 80) {
     res.send("Grade C");
-  } else if (req.params.num <= 70 && req.params.num>0) {
+  } else if (req.params.num <= 70 && req.params.num>=0) {
     res.send("Failed");
-  }else if(req.params.num>100){
+  }else{
     res.send("Enter between 0-100 number")
   }
 });
