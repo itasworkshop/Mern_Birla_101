@@ -48,7 +48,8 @@ app.get('/students/:id', (req, res, next) => {
 
 //http://localhost:3000/students/101
 app.get('/users/:rollno', (req, res, next) => {
-  Student.find({rollno:new RegExp(req.params.rollno)}, function(err,students) {
+  Student.find({ rollno: req.params.rollno}
+    , function(err,students) {
     if(err) return next(err);
     res.json(students)
   })
