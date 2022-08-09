@@ -5,11 +5,11 @@ const port = 4444
 
 app.get("/calc/:num1/:num2", (req, res) => {
   const addition = Number(req.params.num1) + Number(req.params.num2);
-  const ssubstraction = Number(req.params.num1) - Number(req.params.num2);
+  const substraction = Number(req.params.num1) - Number(req.params.num2);
   const multiply = Number(req.params.num1) * Number(req.params.num2);
   const division = Number(req.params.num1) / Number(req.params.num2);
   res.send(
-    `"Hello this is addition page response!"  ${addition}  "Hello this is substraction page response!"  ${ssubstraction}  "Hello this is multiplication page response!"  ${multiply}  "Hello this is division page response!"  ${division}`
+    `"Hello this is addition page response!"  ${addition}  "Hello this is substraction page response!"  ${substraction}  "Hello this is multiplication page response!"  ${multiply}  "Hello this is division page response!"  ${division}`
   );
 });
 
@@ -19,9 +19,9 @@ app.get("/grade/:num", (req, res) => {
   } else if (req.params.num > 80 && req.params.num <= 90) {
     res.send("Grade B");
   } else if (req.params.num > 70 && req.params.num <= 80) {
-    res.send("Grade c");
+    res.send("Grade C");
   } else if (req.params.num <= 70) {
-    res.send("Fail");
+    res.send("Failed");
   }
 });
 
