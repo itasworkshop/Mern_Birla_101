@@ -1,24 +1,105 @@
-const express = require('express')
-const router = require("./Router/router")
-const app = express()
+var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
 const port = 3000
+var mongoose = require('mongoose');
+var Student = require('./model/students');
 
 
-app.get('/calculator/:number1/:number2', (req, res) => {
-  const number1 = req.params.number1;
-  const number2 = req.params.number2;
-  let add = parseFloat(number1) + parseFloat(number2);
-  let multi = parseFloat(number1) * parseFloat(number2);
-  let divide = parseFloat(number1) / parseFloat(number2);
-  let subtraction = parseFloat(number1) - parseFloat(number2);
-  res.json({"Number1" : number1, "Number2" : number2 ,"Addition" : add ,"Subtration" :subtraction, "Multiply" : multi, "Divition" : divide });
+//var student = require('routes');
+var app = express();
+
+//Set up mongoose connection
+var mongoose = require('mongoose');
+const { $where } = require('./model/students');
+var mongoDB = 'mongodb://127.0.0.1/College';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+//get request for home path
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
+/*
+//http://localhost:3000/students
+app.get('/students', (req, res) => {
+    res.send('Hello from students page response!')
+})
+*/
 
-app.use(router);
+//http://localhost:3000/students
+app.get('/students', (req, res, next) => {
+  Student.find(function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  })
+})
+app.get('/users', (req, res, next) => {
+  Student.find(function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  })
+})
 
+//http://localhost:3000/students/62f24142ed03d885bd9d2c00
+app.get('/students/:id', (req, res, next) => {
+  Student.findById(req.params.id, function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  })
+})
+
+//http://localhost:3000/students/101
+app.get('/users/:rollno', (req, res, next) => {
+
+  Student.find( { rollno: req.params.rollno} , function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  } )
+})
+app.delete('/users/:rollno', (req, res, next) => {
+
+  Student.findOneAndDelete( { rollno: req.params.rollno} , function(err,students) {
+    if(err) {return next(err);
+    }else{ 
+        res.json(students)
+    }
+  } )
+})
+app.delete('/users/:id', (req, res, next) => {
+
+    Student.findOneAndDelete(  req.params.id , function(err,students) {
+      if(err) {return next(err);
+      }else{ 
+          res.json(students)
+      }
+    } )
+  })
+
+app.post('/users', (req,res,next) => {
+
+    Student.insertMany(req.body ,function(err,students) {
+        if(err) {return next(err);
+        }else{ 
+            res.json(students)
+        }
+      } );
+})
+
+/*
+//http://localhost:3000/students/rajesh
+app.get('/students/:name', (req, res) => {
+    const name = req.params.name;
+    res.send('Hello from students page response!'+name)
+})
+*/
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+module.exports = app;

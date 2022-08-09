@@ -2,6 +2,7 @@ const express = require('express');
 const router = new express.Router();
 const crypto = require("crypto");
 
+
 router.get('/students/:name/:cmark/:mmark/:pmark', (req, res) => {
     const name = req.params.name;
     const cmark = req.params.cmark;
@@ -21,9 +22,8 @@ router.get('/students/:name/:cmark/:mmark/:pmark', (req, res) => {
          Grade = "U";
        }
 
-       res.json({"id" : id , "Name" : name ,"Chemistry" : cmark, "Maths" : mmark,"Physics" : pmark,"Total" : total, "Average" : avg, "Grade" : Grade   });
-       const data = localStorage.setItem('date', {"name":name, "cmark":cmark, "mmark": mmark , "pmark" : pmark , "total": total})
-
+    res.json({"id" : id , "Name" : name ,"Chemistry" : cmark, "Maths" : mmark,"Physics" : pmark,"Total" : total, "Average" : avg, "Grade" : Grade   });
+    const data = localStorage.setItem('date', {"name":name, "cmark":cmark, "mmark": mmark , "pmark" : pmark , "total": total})
 }) 
 
 module.exports = router
