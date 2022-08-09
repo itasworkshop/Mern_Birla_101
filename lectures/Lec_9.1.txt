@@ -1,0 +1,45 @@
+Working with Mongoose:-
+
+1) install mongoose module 
+npm install mongoose
+
+2) create schema
+var mongoose = require('mongoose');
+
+//db.students.insertMany([{rollno: "101", name:"Raju", subject: "Maths"}, {rollno: "102", name : "Rajesh", subject : "computer science"}])
+
+var StudentSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    subject: String,
+});
+
+
+module.exports = mongoose.model('Student', StudentSchema);
+
+3) Mongoose configuration in app.js
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://127.0.0.1/test';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+4) Get Request
+
+//http://localhost:3000/students
+app.get('/students', (req, res, next) => {
+  Student.find(function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  })
+})
+
+//http://localhost:3000/students/62f24142ed03d885bd9d2c00
+app.get('/students/:id', (req, res, next) => {
+  Student.findById(req.params.id, function(err,students) {
+    if(err) return next(err);
+    res.json(students)
+  })
+})
