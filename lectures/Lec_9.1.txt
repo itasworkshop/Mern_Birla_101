@@ -43,3 +43,51 @@ app.get('/students/:id', (req, res, next) => {
     res.json(students)
   })
 })
+
+
+POST Request
+1) Make sure you have configured express for using json
+app.use(express.json());
+
+2) Send request from postman in body as json type
+
+{"rollno": 103,"name": "Ricky","subject": "Science"}
+
+//http://localhost:3000/student
+app.post('/student', (req, res, next) => {
+  Student.create(req.body, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})
+
+Note:-
+for avoiding version field in mongodb
+var StudentSchema = new mongoose.Schema({
+    rollno: Number,
+    name: String,
+    subject: String,
+}, {
+  versionKey: false // You should be aware of the outcome after set to false
+});
+
+
+PUT Request
+//http://localhost:3000/students/101
+app.put('/students/:rollno', (req, res, next) => {
+  Student.findOneAndUpdate({ rollno: req.params.rollno},
+      req.body, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})
+
+DELETE Request
+//http://localhost:3000/students/101
+app.delete('/students/:rollno', (req, res, next) => {
+  Student.findOneAndDelete({ rollno: req.params.rollno},
+      req, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})

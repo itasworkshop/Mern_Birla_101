@@ -18,6 +18,8 @@ var StudentSchema = new mongoose.Schema({
     rollno: Number,
     name: String,
     subject: String,
+}, {
+  versionKey: false // You should be aware of the outcome after set to false
 });
 
 module.exports = mongoose.model('Student', StudentSchema);

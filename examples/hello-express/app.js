@@ -9,6 +9,8 @@ var Student = require('./models/student');
 //var student = require('routes');
 var app = express();
 
+app.use(express.json());
+
 //Set up mongoose connection
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://127.0.0.1/test';
@@ -54,6 +56,36 @@ app.get('/users/:rollno', (req, res, next) => {
     res.json(students)
   })
 })
+
+//used for creating new record
+//http://localhost:3000/student
+app.post('/student', (req, res, next) => {
+  //console.log(req);
+  Student.create(req.body, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})
+
+
+//http://localhost:3000/students/101
+app.put('/students/:rollno', (req, res, next) => {
+  Student.findOneAndUpdate({ rollno: req.params.rollno},
+      req.body, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})
+
+//http://localhost:3000/students/101
+app.delete('/students/:rollno', (req, res, next) => {
+  Student.findOneAndDelete({ rollno: req.params.rollno},
+      req, function(err,student) {
+    if(err) return next(err);
+    res.json(student)
+  })
+})
+
 
 /*
 //http://localhost:3000/students/rajesh
