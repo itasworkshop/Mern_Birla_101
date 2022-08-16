@@ -1,0 +1,11 @@
+Consuming API in React
+
+1) axios
+a promise based HTTP client
+
+what is promise?
+what is async?
+what is await?
+
+2) fetch API(javascript)
+a browser inbuilt web api

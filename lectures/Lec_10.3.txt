@@ -1,0 +1,40 @@
+React Routing
+
+- Routing is how a web application directs its traffic
+- navigating from one component to another component
+- no built in routing available
+- react-router-dom
+
+Steps
+1) create react app to create app
+2) npm install react-router-dom
+3) Browser Router - to give clean URLs
+
+mypizza.com/home
+mypizza.com/about
+
+4) Routes --> group of all the routes, top to bottom
+Route --> individual
+
+if you give particular path i will display particular component
+
+5) For fetching you can use useEffect Hook
+
+useEffect
+ans: to perform side effects on our components, for ex - fetching data, dom update etc.
+
+function Timer(){
+  const[count,setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount(count => count +1);
+    }, 1000);
+  });
+
+  return <h1>The current counter is updated {count} times.</h1>
+}
+
+render(
+  <Timer />, document.querySelector('#root')
+)

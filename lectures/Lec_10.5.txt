@@ -1,0 +1,11 @@
+What is Context API?
+Redux vs Context API?
+ans: application level state management
+context api lighter solution for state management.
+
+Context API --> global variable in react
+
+useContext hook in FB components
+
+provider --> the component which provides the value
+consumer --> the component which consumes the value

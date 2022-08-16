@@ -1,0 +1,112 @@
+REST API
+
+API --> application programing interface
+how one software component communicates with another one
+
+REST --> 
+Representational State Transfer protocol
+
+--> used to describe architecure style or web services
+--> Restful --> any system that is implementing rest standards
+--> not related any language
+
+REST principles
+1) Uniform Interface --> for all components , same interface, URI
+2) Client-Server --> sepearte of concern
+server - store and manipulate data
+client - request, display the response
+3) Stateless Interaction/Transaction --> all information about each request is within that request
+4) Cacheable --> client and server can cache resources/temporary store
+5) Layered Architure --> directly client to end server or intermediate load-balancer.
+6) Code on Demand --> client can download code
+
+
+Client-Server -- system perspective
+MVC architecture -- app design
+
+Request/Response
+HTTP --> Hyper Text Tranfer Protocol
+how client and server talks to each other
+
+Request Methods
+1) GET --> read action[ retrives a resource]
+2) POST --> create action[creating a new resource]
+3) PUT --> updating action[updating existing resource]
+4) DELETE --> delete action[deletes a resource]
+
+which methods are idempotent?
+answer:- GET,PUT,Delete request is idempotent, POST is not idempotent because it create new resource with same call same data.
+
+--> what is idempotent? 
+answer:- same call can be made multiple times without producing different result.
+
+Response Codes:-
+GET - 200 - OK
+POST - 201 - Created
+PUT - 200 - OK
+DELETE - 200(OK), 202(Accepted), 204(No content)
+
+REST API Endpoints
+endpoint --> URL of the request that can accept GET,POST,PUT,DELETE request.
+
+Root Endpoint:-
+http://api.mypizza.com/v2
+
+Path
+/users
+/user/5
+
+Query
+?location=delhi&age=21
+
+http://api.mypizza.com/users?limit=10
+
+
+Q) what is difference between Restful and Restless API?
+ans: RestFul means which is following REST standards, HTTP methods, JSON,HTML ect, use large bandwidth
+		RestLess --> not following , SOAP, uses XML documents for communication, small bandwidth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
