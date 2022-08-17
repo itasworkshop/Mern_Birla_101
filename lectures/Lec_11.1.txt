@@ -1,0 +1,26 @@
+Redux 
+state management/container for javascript application.
+
+React --> manage state at component level
+pass these via props
+Redux --> entire state of our application is managed as an immutable object(once you decide you don't change)
+
+Why Redux
+1) Global state
+2) Edux Dev Tool --> keep track
+
+Terminilogy
+1) Action --> data from application to Redux store
+
+2) Reducers --> function which two state and action --> always returns copy of the entire state
+
+3) Store --> state lives in store
+const store = creatStore(reducer)
+
+4) Dispatch --> a method on store accepts an object which is used to update redux state.
+
+5) Connect --> React to Redux
+container --> connected component is container
+
+Steps
+1) 
