@@ -1,0 +1,49 @@
+Webpack --> module bundler
+-JS tool for bundling/build tool
+-supplies dev server
+- create-react-app is already using webpack
+
+Steps:-
+1) create a directory
+
+C:\Development\Mern_Birla_101\examples>mkdir hello-webpack
+
+2) initialise this directory with npm init
+C:\Development\Mern_Birla_101\examples>cd hello-webpack
+
+C:\Development\Mern_Birla_101\examples\hello-webpack>npm init -y
+Wrote to C:\Development\Mern_Birla_101\examples\hello-webpack\package.json:
+
+{
+  "name": "hello-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+3) webpack dependancy
+npm i -D webpack webpack-cli
+
+4) webpack.config.js and we provide configuration,update packe.json for build:webpack
+
+5) build app
+npm run build
+
+6) built output will be in dist
+
+7) plugin for html files
+npm i -D html-webpack-plugin
+
+8) get http-server
+npm i -D http-server
+9) get clean-webpack-plugin
+10) 
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-env @babel/plugin-proposal-class-properties
+
+11) npm i -D webpack-dev-server

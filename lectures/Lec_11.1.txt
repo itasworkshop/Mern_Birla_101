@@ -23,4 +23,8 @@ const store = creatStore(reducer)
 container --> connected component is container
 
 Steps
-1) 
+1) Create app
+npx create-react-app redux-concept
+
+2) Dependancy Redux
+npm i redux react-redux redux-thunk redux-devtools-extension react-router-dom
