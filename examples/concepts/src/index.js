@@ -2,42 +2,62 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-//React Hook --> useState()
-//Returns a stateful value, and a function to update it.
-//What is useState()?
+//HOC --> is a function which takes componentand returns a new component, reuse component logic
 
-function MyComponentWithHook(){
-
-  const[user,setUser] = useState({name:"Rajesh",age:20});
-
-  const handleUpdateUser = (event) => {
-    //setUser({username:"suraj",age:25});
-    //{id:101,name:raj,cmarks:45,pmarks:55,mmarks:67}
-    const{name,value} = event.target;
-    console.log({[name]:value});
-    setUser({ ...user, [name]:value});
+function getUser(){
+  return{
+    id:101,
+    name:"Rajesh",
+    age:25,
+    street: "10th cross road",
+    state:"KA"
   }
-
-  return(
-    <div>
-      <p>My name is {user.username}</p>
-      <p>and my age is {user.age} years.</p>
-
-      <label>
-        Name:
-        <input type="text" name="name" value={user.username} onChange={handleUpdateUser}/>
-      </label>
-      <label>
-        Age:
-        <input type="text" name="age" value={user.age} onChange={handleUpdateUser}/>
-      </label>
-    </div>
-    
-  );
 }
 
+function showUser(props){
+  return(
+    <div>
+      <p>User Id is :{props.id}</p>
+      <p>User Name is :{props.name}</p>
+      <p>User Age is :{props.age}</p>
+    </div>
+  )
+}
+
+function UserAddress(props){
+  return(
+    <div>
+      <p>User Id is :{props.id}</p>
+      <p>User address street is :{props.street}</p>
+      <p>User address state is :{props.state}</p>
+    </div>
+  )
+}
+
+var HigherOrderComponent = function(WrappedComponent){
+
+  return class UserDetailComponent extends React.Component{
+    constructor(props){
+      super(props);
+      this.state = getUser();
+    }
+
+    render(){
+      return(
+        <div>
+          <WrappedComponent {...this.state}></WrappedComponent>
+        </div>
+      )
+    }
+
+  }
+
+}
+
+var UserDetail = HigherOrderComponent(showUser)
+var UserAddressDetail = HigherOrderComponent(UserAddress)
 
 ReactDOM.render(
-  <MyComponentWithHook />, document.getElementById('root')
+  <UserAddressDetail />, document.getElementById('root')
 );
 

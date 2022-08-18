@@ -1,0 +1,44 @@
+MongoDb Aggregartion
+
+Aggregate Operators
+1) $group
+2) $count
+
+db.weather.aggregate([{$group:{_id:"$weather_data.city",avg:{$avg:"$weather_data.currently_temperature"}}}]);
+
+> db.weather.aggregate([{$group:{_id:"$weather_data.city",avg:{$avg:"$weather_data.currently_temperature"}}}]);
+{ "_id" : "Zaragoza", "avg" : 14.920396085740913 }
+{ "_id" : "Zurich", "avg" : 13.187506361323154 }
+{ "_id" : "Berlin", "avg" : 12.268012889366274 }
+{ "_id" : "Gothenburg", "avg" : 8.255659059152306 }
+{ "_id" : "Brussels", "avg" : 10.797363763390777 }
+{ "_id" : "Vienna", "avg" : 12.410097810898929 }
+{ "_id" : "Helsinki", "avg" : 8.065960591133006 }
+{ "_id" : "Copenhagen", "avg" : 9.671015370284117 }
+{ "_id" : "test", "avg" : 21.22 }
+{ "_id" : "Lyon", "avg" : 14.118699906803355 }
+
+db.weather.aggregate([{$group:{_id:"$weather_data.city",numrecord:{$count:{}}}}]);
+
+Index -->
+performance mechanism for searching
+
+why do we need index?
+ans: to have better performance for search items in table/record.
+
+-MongoDb automatically creates index for _id field
+unique field _id
+
+2) creating our own 
+
+which field do you decide to create index for?
+ans: the field which is getting queried most.
+
+db.weather.createIndex({"weather_data.city":1},{name:"city name index"});
+
+db.weather.find({$where: "this.weather_data.city=='Berlin'"});
+
+3) Compound Index
+db.weather.createIndex({"weather_data.city":1},{"weather_data.date_time":1});
+
+> db.student.createIndex({"id":1,"name":1});
