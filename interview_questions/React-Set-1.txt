@@ -1,0 +1,24 @@
+1) Composition vs Inheritance?
+2) What is children "props.children"?
+ans: sometime when our ui component does not know what would be part of that component in advance or ahead in time, we just use "props.children" as generic representation.
+for exa - empty box, border
+whatever comes in future that will be displayed in box.
+Difference between DOM & Virtual DOM?
+What is JSX?
+What are the differences between a class component and functional component?
+What is the difference between state and props?
+How do you prevent default behaviour of a event in JS?
+What will happen if we don't use bind in JSX callback?
+Why we need to bind ?
+What is key in react?
+Why react needs key?
+How do you desire/declare key?
+What are controlled components?
+Difference between controlled components & Uncontrolled components?
+
+What is Routing in react?
+- react-router-dom module.
+what are import BrowserRouter, Route, Link, Switch,useRouteMatch,useParams ?
+Difference between match.url and match.path?
+//url = http://localhost:3000/contacts/contact1
+ //path = http://localhost:3000/contacts/:id
