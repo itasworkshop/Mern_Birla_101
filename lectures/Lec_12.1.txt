@@ -4,6 +4,9 @@ Aggregate Operators
 1) $group
 2) $count
 
+mongoimport --jsonArray --db gfg --collection weather --file D:\weather.json
+
+
 db.weather.aggregate([{$group:{_id:"$weather_data.city",avg:{$avg:"$weather_data.currently_temperature"}}}]);
 
 > db.weather.aggregate([{$group:{_id:"$weather_data.city",avg:{$avg:"$weather_data.currently_temperature"}}}]);

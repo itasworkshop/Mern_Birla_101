@@ -1,0 +1,34 @@
+Performance optimisation
+
+Architecture
+1) Microservices
+2) Microfront end
+
+Database Layer
+1) Indexing
+2) using id field
+
+React Front end Layer
+1) Using Immutable Data Structures
+2) Function/Stateless Components and React.PureComponent
+3) Multiple Chunk Files
+4) Using Production Mode Flag in Webpack
+5) Dependency optimization
+6) Use React.Fragments to Avoid Additional HTML Element Wrappers
+class Comments extends React.PureComponent{
+    render() {
+        return (
+            <React.Fragment>
+                <h1>Comment Title</h1>
+                <p>comments</p>
+                <p>comment time</p>
+            </React.Fragment>
+        );
+    } 
+}
+7) Lot of debounce call
+8) Virtualize Long Lists
+List virtualization, or windowing, is a technique to improve performance when rendering a long list of data. This technique only renders a small subset of rows at any given time and can dramatically reduce the time it takes to re-render the components, as well as the number of DOM nodes created.
+9) Analyzing and Optimizing Your Webpack Bundle Bloat
+10) Consider Server-side Rendering
+11) Enable Gzip Compression on Web Server

@@ -1,0 +1,22 @@
+Microservices
+
+Making one giant single application
+
+different services based on business logic --> microservices
+
+-> requirement
+-> changes independently 
+-> resource allocation can happen as required
+
+Microfront end :-
+application is divided into various individual applications and easy to maintain, that concept known as Micro Frontends.
+
+1) create apps
+npx create-react-app container
+npx create-react-app blogs
+npx create-react-app header
+
+2)
+https://dev.to/kpiteng/microfrontends-with-react-47jb
+
+
