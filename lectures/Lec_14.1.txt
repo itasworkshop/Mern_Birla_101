@@ -1,0 +1,13 @@
+Typescript
+
+-superset of javascript
+-js is static types language
+
+var a = 10;
+var b = 20;
+
+-TS gives facility for defining type of the variables
+-compiled
+
+TS --> JS
+
